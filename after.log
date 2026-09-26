@@ -1,0 +1,21 @@
+   Compiling gpui-base v0.6.5 (/home/luren/Code/rust/gpui-component/crates/base)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 21.19s
+     Running unittests src/lib.rs (target/debug/deps/gpui_base-fe3ff9e8a11ca635)
+
+running 1 test
+phase,rows,columns,highlighted_cells,source_bytes,build_ms,remap_ms,total_ms,kept_cells
+after,1000,1,1001,6012,0.011361,0.035831,0.047192,1
+after,2000,1,2001,12012,0.024431,0.080943,0.105374,1
+after,4000,1,4001,24012,0.057402,0.180636,0.238038,1
+after,8000,1,8001,48012,0.103364,0.401035,0.504399,1
+after,16000,1,16001,96012,0.254170,0.890963,1.145133,1
+after,32000,1,32001,192012,0.503359,1.888680,2.392039,1
+after,64000,1,64001,384012,1.660232,4.050660,5.710892,1
+test text::range_highlight::table_highlight_validation::validation_table_highlight_remap_scaling has been running for over 60 seconds
+after,100000,1,100001,600012,2.977331,7.126794,10.104125,1
+after,2,4096,12288,65544,0.131905,0.734487,0.866392,4096
+after,64,64,4160,17028,0.036772,0.164076,0.200848,64
+test text::range_highlight::table_highlight_validation::validation_table_highlight_remap_scaling ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 1152 filtered out; finished in 83.46s
+

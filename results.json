@@ -1,0 +1,238 @@
+{
+  "before": [
+    {
+      "phase": "before",
+      "rows": "1000",
+      "columns": "1",
+      "highlighted_cells": "1001",
+      "source_bytes": "6012",
+      "build_ms": "0.007020",
+      "remap_ms": "0.180577",
+      "total_ms": "0.187597",
+      "kept_cells": "1"
+    },
+    {
+      "phase": "before",
+      "rows": "2000",
+      "columns": "1",
+      "highlighted_cells": "2001",
+      "source_bytes": "12012",
+      "build_ms": "0.012000",
+      "remap_ms": "0.660135",
+      "total_ms": "0.672135",
+      "kept_cells": "1"
+    },
+    {
+      "phase": "before",
+      "rows": "4000",
+      "columns": "1",
+      "highlighted_cells": "4001",
+      "source_bytes": "24012",
+      "build_ms": "0.023651",
+      "remap_ms": "2.502742",
+      "total_ms": "2.526393",
+      "kept_cells": "1"
+    },
+    {
+      "phase": "before",
+      "rows": "8000",
+      "columns": "1",
+      "highlighted_cells": "8001",
+      "source_bytes": "48012",
+      "build_ms": "0.048552",
+      "remap_ms": "9.567854",
+      "total_ms": "9.616406",
+      "kept_cells": "1"
+    },
+    {
+      "phase": "before",
+      "rows": "16000",
+      "columns": "1",
+      "highlighted_cells": "16001",
+      "source_bytes": "96012",
+      "build_ms": "0.117624",
+      "remap_ms": "37.381522",
+      "total_ms": "37.499146",
+      "kept_cells": "1"
+    },
+    {
+      "phase": "before",
+      "rows": "32000",
+      "columns": "1",
+      "highlighted_cells": "32001",
+      "source_bytes": "192012",
+      "build_ms": "0.239669",
+      "remap_ms": "146.040348",
+      "total_ms": "146.280017",
+      "kept_cells": "1"
+    },
+    {
+      "phase": "before",
+      "rows": "64000",
+      "columns": "1",
+      "highlighted_cells": "64001",
+      "source_bytes": "384012",
+      "build_ms": "0.505248",
+      "remap_ms": "589.886531",
+      "total_ms": "590.391779",
+      "kept_cells": "1"
+    },
+    {
+      "phase": "before",
+      "rows": "100000",
+      "columns": "1",
+      "highlighted_cells": "100001",
+      "source_bytes": "600012",
+      "build_ms": "0.862782",
+      "remap_ms": "1467.001068",
+      "total_ms": "1467.863850",
+      "kept_cells": "1"
+    },
+    {
+      "phase": "before",
+      "rows": "2",
+      "columns": "4096",
+      "highlighted_cells": "12288",
+      "source_bytes": "65544",
+      "build_ms": "0.089033",
+      "remap_ms": "180.075636",
+      "total_ms": "180.164669",
+      "kept_cells": "4096"
+    },
+    {
+      "phase": "before",
+      "rows": "64",
+      "columns": "64",
+      "highlighted_cells": "4160",
+      "source_bytes": "17028",
+      "build_ms": "0.019440",
+      "remap_ms": "0.693336",
+      "total_ms": "0.712776",
+      "kept_cells": "64"
+    }
+  ],
+  "after": [
+    {
+      "phase": "after",
+      "rows": "1000",
+      "columns": "1",
+      "highlighted_cells": "1001",
+      "source_bytes": "6012",
+      "build_ms": "0.011361",
+      "remap_ms": "0.035831",
+      "total_ms": "0.047192",
+      "kept_cells": "1"
+    },
+    {
+      "phase": "after",
+      "rows": "2000",
+      "columns": "1",
+      "highlighted_cells": "2001",
+      "source_bytes": "12012",
+      "build_ms": "0.024431",
+      "remap_ms": "0.080943",
+      "total_ms": "0.105374",
+      "kept_cells": "1"
+    },
+    {
+      "phase": "after",
+      "rows": "4000",
+      "columns": "1",
+      "highlighted_cells": "4001",
+      "source_bytes": "24012",
+      "build_ms": "0.057402",
+      "remap_ms": "0.180636",
+      "total_ms": "0.238038",
+      "kept_cells": "1"
+    },
+    {
+      "phase": "after",
+      "rows": "8000",
+      "columns": "1",
+      "highlighted_cells": "8001",
+      "source_bytes": "48012",
+      "build_ms": "0.103364",
+      "remap_ms": "0.401035",
+      "total_ms": "0.504399",
+      "kept_cells": "1"
+    },
+    {
+      "phase": "after",
+      "rows": "16000",
+      "columns": "1",
+      "highlighted_cells": "16001",
+      "source_bytes": "96012",
+      "build_ms": "0.254170",
+      "remap_ms": "0.890963",
+      "total_ms": "1.145133",
+      "kept_cells": "1"
+    },
+    {
+      "phase": "after",
+      "rows": "32000",
+      "columns": "1",
+      "highlighted_cells": "32001",
+      "source_bytes": "192012",
+      "build_ms": "0.503359",
+      "remap_ms": "1.888680",
+      "total_ms": "2.392039",
+      "kept_cells": "1"
+    },
+    {
+      "phase": "after",
+      "rows": "64000",
+      "columns": "1",
+      "highlighted_cells": "64001",
+      "source_bytes": "384012",
+      "build_ms": "1.660232",
+      "remap_ms": "4.050660",
+      "total_ms": "5.710892",
+      "kept_cells": "1"
+    },
+    {
+      "phase": "after",
+      "rows": "100000",
+      "columns": "1",
+      "highlighted_cells": "100001",
+      "source_bytes": "600012",
+      "build_ms": "2.977331",
+      "remap_ms": "7.126794",
+      "total_ms": "10.104125",
+      "kept_cells": "1"
+    },
+    {
+      "phase": "after",
+      "rows": "2",
+      "columns": "4096",
+      "highlighted_cells": "12288",
+      "source_bytes": "65544",
+      "build_ms": "0.131905",
+      "remap_ms": "0.734487",
+      "total_ms": "0.866392",
+      "kept_cells": "4096"
+    },
+    {
+      "phase": "after",
+      "rows": "64",
+      "columns": "64",
+      "highlighted_cells": "4160",
+      "source_bytes": "17028",
+      "build_ms": "0.036772",
+      "remap_ms": "0.164076",
+      "total_ms": "0.200848",
+      "kept_cells": "64"
+    }
+  ],
+  "method": {
+    "gpui_base_opt_level": 3,
+    "samples": 5,
+    "statistic": "median total (build plus remap)",
+    "warmups": 1,
+    "excluded": [
+      "parsing",
+      "search",
+      "highlight installation"
+    ],
+    "frame_latency_instrumented": false
+  }
+}
