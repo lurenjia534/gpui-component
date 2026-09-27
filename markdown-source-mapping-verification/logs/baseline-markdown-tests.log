@@ -1,0 +1,60 @@
+   Compiling gpui-base v0.6.5 (/home/luren/Code/rust/gpui-component/crates/base)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 9.23s
+     Running unittests src/lib.rs (target/debug/deps/gpui_base-8fddc31a1c7dcd7a)
+
+running 52 tests
+test text::format::markdown::tests::custom_block_plugin_registers_parser_and_renderer ... ok
+test text::format::markdown::tests::custom_block_parser_converts_ticker_syntax_to_custom_node ... ok
+test text::format::markdown::tests::fenced_yaml_remains_a_code_block ... ok
+test text::format::markdown::tests::claimed_inline_math_survives_prose_flattening ... ok
+test text::format::markdown::tests::block_math_parses_as_a_block_and_falls_back_to_a_code_block ... ok
+test text::format::markdown::tests::inline_extensions_preserve_nodes_inside_marks_and_global_source_ranges ... ok
+test text::format::markdown::tests::non_mapping_yaml_frontmatter_falls_back_to_code_block ... ok
+test text::format::markdown::tests::inline_parser_without_metadata_falls_back_to_original_source ... ok
+test text::format::markdown::tests::inline_math_is_enabled_by_default_and_respects_code_and_escapes ... ok
+test text::format::markdown::tests::selected_source_range_excludes_closing_fence_candidate ... ok
+test text::format::markdown::tests::selected_source_range_does_not_shift_a_hard_break_after_an_escape ... ok
+test text::format::markdown::tests::inline_html_formatting_tags_pair_across_siblings ... ok
+test text::format::markdown::tests::selected_source_range_excludes_an_unreached_inline_image ... ok
+test text::format::markdown::tests::selected_source_range_includes_a_leading_inline_image ... ok
+test text::format::markdown::tests::selected_source_range_crosses_style_boundaries ... ok
+test text::format::markdown::tests::inline_object_markdown_roundtrip_preserves_nested_emphasis ... ok
+test text::format::markdown::tests::selected_source_range_does_not_borrow_an_escape_from_the_previous_node ... ok
+test text::format::markdown::tests::selected_source_range_maps_after_an_escaped_backslash ... ok
+test text::format::markdown::tests::selected_source_range_includes_consecutive_inline_images ... ok
+test text::format::markdown::tests::selected_source_range_includes_an_enclosed_inline_image ... ok
+test text::format::markdown::tests::selected_source_range_includes_a_trailing_inline_image ... ok
+test text::format::markdown::tests::selected_source_range_maps_decoded_entity_to_its_source_syntax ... ok
+test text::format::markdown::tests::selected_source_range_maps_fenced_code_body_after_matching_info_string ... ok
+test text::format::markdown::tests::selected_source_range_maps_fenced_code_nested_in_a_blockquote ... ok
+test text::format::markdown::tests::selected_source_range_maps_fenced_code_with_blank_lines_and_repeated_text ... ok
+test text::format::markdown::tests::selected_source_range_maps_fenced_code_nested_in_a_list ... ok
+test text::format::markdown::tests::selected_source_range_maps_indented_code_content ... ok
+test text::format::markdown::tests::selected_source_range_maps_around_named_and_numeric_entities ... ok
+test text::format::markdown::tests::selected_source_range_maps_math_block_body ... ok
+test text::format::markdown::tests::selected_source_range_maps_inline_code_delimiters_and_boundaries ... ok
+test text::format::markdown::tests::selected_source_range_maps_mdx_flow_expression_body ... ok
+test text::format::markdown::tests::selected_source_range_maps_inline_code_in_merged_styled_node ... ok
+test text::format::markdown::tests::selected_source_range_maps_footnote_reference_syntax ... ok
+test text::format::markdown::tests::selected_source_range_maps_mdx_text_expression_body ... ok
+test text::format::markdown::tests::selected_source_range_maps_multiline_indented_code ... ok
+test text::format::markdown::tests::selected_source_range_maps_partial_styled_text ... ok
+test text::format::markdown::tests::selected_source_range_maps_the_whole_markdown_escape ... ok
+test text::format::markdown::tests::selected_source_range_rejects_mapped_block_plus_unmappable_entity ... ok
+test text::format::markdown::tests::source_segments_compact_contiguous_one_to_one_mappings ... ok
+test text::format::markdown::tests::selected_source_range_uses_the_selected_identical_styled_occurrence ... ok
+test text::format::markdown::tests::source_segments_keep_non_linear_mappings_atomic ... ok
+test text::format::markdown::tests::test_hard_break_renders_newline ... ok
+test text::format::markdown::tests::selected_source_range_maps_soft_breaks_with_trailing_spaces_and_crlf ... ok
+test text::format::markdown::tests::selected_source_range_maps_soft_breaks_with_source_prefixes ... ok
+test text::format::markdown::tests::test_nested_emphasis_merges_text_marks ... ok
+test text::format::markdown::tests::test_soft_break_reflows_while_hard_break_survives ... ok
+test text::format::markdown::tests::unclaimed_inline_math_keeps_its_literal_source ... ok
+test text::format::markdown::tests::test_soft_break_reflows_to_space ... ok
+test text::format::markdown::tests::test_inline_html_image_stays_in_markdown_paragraph ... ok
+test text::format::markdown::tests::test_inline_html_image_without_size_stays_in_markdown_paragraph ... ok
+test text::format::markdown::tests::yaml_frontmatter_is_disabled_by_default ... ok
+test text::format::markdown::tests::unclaimed_inline_math_parses_its_span_as_prose ... ok
+
+test result: ok. 52 passed; 0 failed; 0 ignored; 0 measured; 1100 filtered out; finished in 0.00s
+

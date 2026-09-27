@@ -1,0 +1,33 @@
+{
+  "baseline_commit": "452e72f24a183174551fdec3db570997b1e1fc8f",
+  "fix_commit": "4c58296ff116cabe5ac6a0ccd6be2b74536cc4f7",
+  "fix_branch": "fix/markdown-source-mapping",
+  "evidence_branch": "evidence/markdown-source-mapping-20260927",
+  "fork_repository": "https://github.com/lurenjia534/gpui-component",
+  "upstream_repository": "https://github.com/longbridge/gpui-kit",
+  "source_path": "crates/base/src/text/format/markdown.rs",
+  "source_before_sha256": "8814f2cc36817e75ef8d88777d29ba7e8dd2993cab61c75d51832f316d791141",
+  "source_after_sha256": "01fd55b72722a19a23e6395dce47a52897049cd745792ae03570df75258fab37",
+  "code_commit_scope": {
+    "files": 1,
+    "additions": 237,
+    "deletions": 38,
+    "new_regression_tests": 5
+  },
+  "validation": {
+    "baseline_markdown_tests": 52,
+    "patched_markdown_tests": 57,
+    "patched_base_tests": 1157,
+    "rust_differential_cases": 2018720,
+    "performance_cases": 23,
+    "public_background_path": "passed",
+    "clippy": "passed",
+    "base_formatting": "passed",
+    "workspace_formatting": "failed only in unchanged crates/component/src/form/tests.rs"
+  },
+  "performance_profile": "Only gpui-base overrides opt-level=3; other dependencies use repository dev profile.",
+  "sampling": "One warm-up, three measured calls, independent medians. Input construction, verification and returned-result destruction excluded.",
+  "boundaries": "Complete multiline-code parsing still grows superlinearly in measured sizes. No native GUI frame latency, real executor starvation, or macOS/Windows validation claimed.",
+  "publication_precedent": "https://github.com/longbridge/gpui-kit/pull/3247",
+  "process_record": "PROCESS.md"
+}

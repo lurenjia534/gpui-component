@@ -1,0 +1,78 @@
+Diff in /home/luren/Code/rust/gpui-component/crates/base/src/text/format/markdown.rs:434:
+                 &mut segments,
+                 SourceSegment {
+                     rendered: rendered_start..rendered_end,
+[31m-                    source: (source_offset + raw_cursor)..(source_offset + raw_cursor + *source_len),
+(B[m[32m+                    source: (source_offset + raw_cursor)
+(B[m[32m+                        ..(source_offset + raw_cursor + *source_len),
+(B[m                 },
+             );
+             rendered_start = rendered_end;
+Diff in /home/luren/Code/rust/gpui-component/crates/base/src/text/format/markdown.rs:1294:
+         let mut positions = None;
+         assert_eq!(source_char_offset(&raw, 0, 'b', &mut positions), Some(1));
+         assert!(positions.is_none(), "successful scans need no index");
+[31m-        assert_eq!(source_char_offset(&raw, 0, '\u{fffd}', &mut positions), None);
+(B[m[32m+        assert_eq!(
+(B[m[32m+            source_char_offset(&raw, 0, '\u{fffd}', &mut positions),
+(B[m[32m+            None
+(B[m[32m+        );
+(B[m         assert!(positions.is_some(), "failed scans must not be repeated");
+         assert_eq!(source_char_offset(&raw, 2, 'b', &mut positions), Some(4));
+[31m-        assert_eq!(source_char_offset(&raw, raw.len(), 'a', &mut positions), None);
+(B[m[32m+        assert_eq!(
+(B[m[32m+            source_char_offset(&raw, raw.len(), 'a', &mut positions),
+(B[m[32m+            None
+(B[m[32m+        );
+(B[m 
+         let missing = "\u{fffd}".repeat(4_096);
+         assert_eq!(
+Diff in /home/luren/Code/rust/gpui-component/crates/component/src/form/tests.rs:167:
+             } else {
+                 Form::vertical()
+             };
+[31m-            div()
+(B[m[31m-                .w(px(400.))
+(B[m[31m-                .child(
+(B[m[31m-                    form.child(
+(B[m[31m-                        Field::new().child(
+(B[m[31m-                            div()
+(B[m[31m-                                .debug_selector(|| "control-0".into())
+(B[m[31m-                                .w_full()
+(B[m[31m-                                .h(px(20.)),
+(B[m[31m-                        ),
+(B[m[31m-                    )
+(B[m[31m-                    .child(
+(B[m[31m-                        Field::new().child(
+(B[m[31m-                            div()
+(B[m[31m-                                .debug_selector(|| "control-1".into())
+(B[m[31m-                                .w_full()
+(B[m[31m-                                .h(px(20.)),
+(B[m[31m-                        ),
+(B[m[32m+            div().w(px(400.)).child(
+(B[m[32m+                form.child(
+(B[m[32m+                    Field::new().child(
+(B[m[32m+                        div()
+(B[m[32m+                            .debug_selector(|| "control-0".into())
+(B[m[32m+                            .w_full()
+(B[m[32m+                            .h(px(20.)),
+(B[m                     ),
+                 )
+[32m+                .child(
+(B[m[32m+                    Field::new().child(
+(B[m[32m+                        div()
+(B[m[32m+                            .debug_selector(|| "control-1".into())
+(B[m[32m+                            .w_full()
+(B[m[32m+                            .h(px(20.)),
+(B[m[32m+                    ),
+(B[m[32m+                ),
+(B[m[32m+            )
+(B[m         }
+     }
+ 
+Diff in /home/luren/Code/rust/gpui-component/crates/component/src/form/tests.rs:211:
+     let styled_gap = styled_second.top() - styled_first.bottom();
+     assert_eq!(styled_gap - default_gap, px(22.));
+ }
+[31m-
+(B[m 

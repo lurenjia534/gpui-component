@@ -1,0 +1,49 @@
+Diff in /home/luren/Code/rust/gpui-component/crates/component/src/form/tests.rs:167:
+             } else {
+                 Form::vertical()
+             };
+[31m-            div()
+(B[m[31m-                .w(px(400.))
+(B[m[31m-                .child(
+(B[m[31m-                    form.child(
+(B[m[31m-                        Field::new().child(
+(B[m[31m-                            div()
+(B[m[31m-                                .debug_selector(|| "control-0".into())
+(B[m[31m-                                .w_full()
+(B[m[31m-                                .h(px(20.)),
+(B[m[31m-                        ),
+(B[m[31m-                    )
+(B[m[31m-                    .child(
+(B[m[31m-                        Field::new().child(
+(B[m[31m-                            div()
+(B[m[31m-                                .debug_selector(|| "control-1".into())
+(B[m[31m-                                .w_full()
+(B[m[31m-                                .h(px(20.)),
+(B[m[31m-                        ),
+(B[m[32m+            div().w(px(400.)).child(
+(B[m[32m+                form.child(
+(B[m[32m+                    Field::new().child(
+(B[m[32m+                        div()
+(B[m[32m+                            .debug_selector(|| "control-0".into())
+(B[m[32m+                            .w_full()
+(B[m[32m+                            .h(px(20.)),
+(B[m                     ),
+                 )
+[32m+                .child(
+(B[m[32m+                    Field::new().child(
+(B[m[32m+                        div()
+(B[m[32m+                            .debug_selector(|| "control-1".into())
+(B[m[32m+                            .w_full()
+(B[m[32m+                            .h(px(20.)),
+(B[m[32m+                    ),
+(B[m[32m+                ),
+(B[m[32m+            )
+(B[m         }
+     }
+ 
+Diff in /home/luren/Code/rust/gpui-component/crates/component/src/form/tests.rs:211:
+     let styled_gap = styled_second.top() - styled_first.bottom();
+     assert_eq!(styled_gap - default_gap, px(22.));
+ }
+[31m-
+(B[m 

@@ -1,0 +1,16 @@
+{
+  "markdown-before.rs": "8814f2cc36817e75ef8d88777d29ba7e8dd2993cab61c75d51832f316d791141",
+  "markdown-after.rs": "01fd55b72722a19a23e6395dce47a52897049cd745792ae03570df75258fab37",
+  "markdown-before-core.rs": "45fca2228781a9ba8f6ab2dd0f3148cfeeba326cfe891cc7b693f59218c03ab8",
+  "benchmark.rs": "b58e4f22e6d5cb4e48c7331be24b4ceb0cd85fe75b8a97c4699c7e4e169cc005",
+  "rerun.py": "0c355a59ebd927f9638154a6ed7583b48685e821cb12d979b6d47fe417ab5edd",
+  "patch": "b7c41b00d740212da3ed130d80a45308f0d45205d1fe48301d0dac2d8f652ec6",
+  "write_report.py": "34eca84c783afe181e51e8c90eaa750d49356b906aff643a6cec90721a8766bb",
+  "results.json": "a10700781605cf89f447860e918b1d23a9ccb93d8f8844034244a0ea2038a159",
+  "applied-and-formatted.patch": "a8632b00619cdb69ecfe056ef8b7057c9746a528c4fd1fc1cd5c774b7d7775de",
+  "original.patch": "b7c41b00d740212da3ed130d80a45308f0d45205d1fe48301d0dac2d8f652ec6",
+  "PROVENANCE.json": "a612f10e139eb00b11b80f16acb33c505630a4aa82853d7bdc04291ace90fa8f",
+  "PROCESS.md": "3cdd314d215f01dc4d531be0fb6c3bdca02da2bdaa1bd82e24aeb8fda36b0650",
+  "README.md": "18c3b0f2201879f6200630e4474f4e790a4984c105d6a8d3f6c86495e0b7b20e",
+  "previous-pr.json": "6b2157cf4d86029e63ced8525a040cb6959a0c2789b92aee828f6726dc689c73"
+}
