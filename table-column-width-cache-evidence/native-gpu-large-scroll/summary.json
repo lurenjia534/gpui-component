@@ -1,0 +1,81 @@
+[
+  {
+    "case": "large",
+    "mode": "scroll",
+    "pairs": 8,
+    "all_windows_active": true,
+    "present_fps": {
+      "before": 84.52509878730363,
+      "after": 92.79724887915934,
+      "before_process_range": [
+        71.69578633499539,
+        90.28327028533286
+      ],
+      "after_process_range": [
+        72.03426437666941,
+        96.08605432376508
+      ]
+    },
+    "fps_increase": 8.272150091855707,
+    "fps_increase_ci95": [
+      3.262579854966063,
+      18.331080405163974
+    ],
+    "fps_increase_percent": 9.786619844919064,
+    "fps_higher_pairs": 7,
+    "all_hardware_rendered": true,
+    "environment": {
+      "window_bounds": "Bounds { origin: Point { x: 0px, y: 0px }, size: Size { 800px \u00d7 600px } }",
+      "scale_factor": 1.75,
+      "gpu": {
+        "is_software_emulated": false,
+        "device_name": "AMD Radeon RX 7900 XTX (RADV NAVI31)",
+        "driver_name": "radv",
+        "driver_info": "Mesa 26.2.1-arch1.1"
+      },
+      "source_bytes": 42346,
+      "declared_refresh_hz": 170.0
+    },
+    "draw_ms": {
+      "before": 9.753996,
+      "after": 8.83592125,
+      "saved": 0.9180747500000006,
+      "saved_percent": 9.412293689683704,
+      "saved_ci95": [
+        0.5327400000000004,
+        4.1491630000000015
+      ],
+      "faster_pairs": 7,
+      "before_process_range": [
+        9.3294025,
+        13.059569
+      ],
+      "after_process_range": [
+        8.584221,
+        12.72565
+      ]
+    },
+    "baseline": {
+      "draw_p95_ms": 12.200702524999997,
+      "draw_p99_ms": 14.571121374999993,
+      "submit_p50_ms": 0.47664949999999995,
+      "submit_p95_ms": 0.54078,
+      "interval_p50_ms": 11.2837325,
+      "interval_p95_ms": 16.104951,
+      "interval_p99_ms": 18.581965399999998,
+      "long_interval_percent": 100.0,
+      "total_presents": 4800
+    },
+    "patched": {
+      "draw_p95_ms": 11.011285224999998,
+      "draw_p99_ms": 13.8409252,
+      "submit_p50_ms": 0.46975449999999996,
+      "submit_p95_ms": 0.5412707499999999,
+      "interval_p50_ms": 10.306404,
+      "interval_p95_ms": 14.661686500000002,
+      "interval_p99_ms": 17.17576894999999,
+      "long_interval_percent": 97.32888146911519,
+      "total_presents": 4800
+    }
+  }
+]

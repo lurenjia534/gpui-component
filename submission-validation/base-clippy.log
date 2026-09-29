@@ -1,0 +1,5 @@
+$ cargo clippy --offline --locked -p gpui-base --lib --tests -- -D warnings
+    Checking gpui-base v0.7.0 (/home/luren/Code/rust/gpui-component/crates/base)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 6.80s
+
+Exit code: 0

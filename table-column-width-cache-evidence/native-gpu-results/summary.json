@@ -1,0 +1,318 @@
+[
+  {
+    "case": "medium",
+    "mode": "scroll",
+    "pairs": 8,
+    "all_windows_active": true,
+    "present_fps": {
+      "before": 169.98596636376004,
+      "after": 169.9930206215304,
+      "before_process_range": [
+        169.9275197908795,
+        170.05859956445727
+      ],
+      "after_process_range": [
+        169.70503660231802,
+        170.0345035064812
+      ]
+    },
+    "fps_increase": 0.007054257770363392,
+    "fps_increase_ci95": [
+      -0.04850193923641655,
+      0.044849304084323194
+    ],
+    "fps_increase_percent": 0.004149905972394841,
+    "fps_higher_pairs": 3,
+    "all_hardware_rendered": true,
+    "environment": {
+      "window_bounds": "Bounds { origin: Point { x: 0px, y: 0px }, size: Size { 800px \u00d7 600px } }",
+      "scale_factor": 1.75,
+      "gpu": {
+        "is_software_emulated": false,
+        "device_name": "AMD Radeon RX 7900 XTX (RADV NAVI31)",
+        "driver_name": "radv",
+        "driver_info": "Mesa 26.2.1-arch1.1"
+      },
+      "source_bytes": 8158,
+      "declared_refresh_hz": 170.0
+    },
+    "draw_ms": {
+      "before": 1.5770835,
+      "after": 1.5348755,
+      "saved": 0.04220800000000002,
+      "saved_percent": 2.6763326101630014,
+      "saved_ci95": [
+        -0.008155000000000134,
+        0.07782999999999984
+      ],
+      "faster_pairs": 7,
+      "before_process_range": [
+        1.541092,
+        1.746607
+      ],
+      "after_process_range": [
+        1.4539465,
+        1.678307
+      ]
+    },
+    "baseline": {
+      "draw_p95_ms": 2.1090070499999993,
+      "draw_p99_ms": 2.729029905,
+      "submit_p50_ms": 0.395449,
+      "submit_p95_ms": 0.44152224999999984,
+      "interval_p50_ms": 5.8749465,
+      "interval_p95_ms": 6.822562,
+      "interval_p99_ms": 7.214597789999998,
+      "long_interval_percent": 0.0,
+      "total_presents": 4800
+    },
+    "patched": {
+      "draw_p95_ms": 2.2592692999999997,
+      "draw_p99_ms": 2.7640790999999996,
+      "submit_p50_ms": 0.396049,
+      "submit_p95_ms": 0.46169979999999994,
+      "interval_p50_ms": 5.8770435,
+      "interval_p95_ms": 6.90495205,
+      "interval_p99_ms": 7.337997099999999,
+      "long_interval_percent": 0.0,
+      "total_presents": 4800
+    }
+  },
+  {
+    "case": "large",
+    "mode": "redraw",
+    "pairs": 10,
+    "all_windows_active": true,
+    "present_fps": {
+      "before": 87.14612566085407,
+      "after": 88.05788563277318,
+      "before_process_range": [
+        57.07462826195997,
+        90.33237922293821
+      ],
+      "after_process_range": [
+        65.66449500504322,
+        96.33385998770466
+      ]
+    },
+    "fps_increase": 0.9117599719191105,
+    "fps_increase_ci95": [
+      -10.962478232007825,
+      19.994111050863516
+    ],
+    "fps_increase_percent": 1.0462426929539026,
+    "fps_higher_pairs": 7,
+    "all_hardware_rendered": true,
+    "environment": {
+      "window_bounds": "Bounds { origin: Point { x: 0px, y: 0px }, size: Size { 800px \u00d7 600px } }",
+      "scale_factor": 1.75,
+      "gpu": {
+        "is_software_emulated": false,
+        "device_name": "AMD Radeon RX 7900 XTX (RADV NAVI31)",
+        "driver_name": "radv",
+        "driver_info": "Mesa 26.2.1-arch1.1"
+      },
+      "source_bytes": 42346,
+      "declared_refresh_hz": 170.0
+    },
+    "draw_ms": {
+      "before": 9.661093000000001,
+      "after": 9.29582475,
+      "saved": 0.3652682500000015,
+      "saved_percent": 3.7808170359192483,
+      "saved_ci95": [
+        -2.6725217062499995,
+        4.221720687499998
+      ],
+      "faster_pairs": 7,
+      "before_process_range": [
+        9.2431225,
+        14.6246475
+      ],
+      "after_process_range": [
+        8.561037500000001,
+        12.4827355
+      ]
+    },
+    "baseline": {
+      "draw_p95_ms": 12.135134274999999,
+      "draw_p99_ms": 15.313590064999998,
+      "submit_p50_ms": 0.475832,
+      "submit_p95_ms": 0.5536449999999999,
+      "interval_p50_ms": 10.9360275,
+      "interval_p95_ms": 15.6123435,
+      "interval_p99_ms": 18.258090049999993,
+      "long_interval_percent": 100.0,
+      "total_presents": 6000
+    },
+    "patched": {
+      "draw_p95_ms": 13.407131024999998,
+      "draw_p99_ms": 14.457220744999999,
+      "submit_p50_ms": 0.46896950000000004,
+      "submit_p95_ms": 0.544648225,
+      "interval_p50_ms": 10.691135,
+      "interval_p95_ms": 16.274085,
+      "interval_p99_ms": 18.621864609999996,
+      "long_interval_percent": 94.99165275459099,
+      "total_presents": 6000
+    }
+  },
+  {
+    "case": "large",
+    "mode": "scroll",
+    "pairs": 8,
+    "all_windows_active": true,
+    "present_fps": {
+      "before": 84.52509878730363,
+      "after": 92.79724887915934,
+      "before_process_range": [
+        71.69578633499539,
+        90.28327028533286
+      ],
+      "after_process_range": [
+        72.03426437666941,
+        96.08605432376508
+      ]
+    },
+    "fps_increase": 8.272150091855707,
+    "fps_increase_ci95": [
+      3.262579854966063,
+      18.331080405163974
+    ],
+    "fps_increase_percent": 9.786619844919064,
+    "fps_higher_pairs": 7,
+    "all_hardware_rendered": true,
+    "environment": {
+      "window_bounds": "Bounds { origin: Point { x: 0px, y: 0px }, size: Size { 800px \u00d7 600px } }",
+      "scale_factor": 1.75,
+      "gpu": {
+        "is_software_emulated": false,
+        "device_name": "AMD Radeon RX 7900 XTX (RADV NAVI31)",
+        "driver_name": "radv",
+        "driver_info": "Mesa 26.2.1-arch1.1"
+      },
+      "source_bytes": 42346,
+      "declared_refresh_hz": 170.0
+    },
+    "draw_ms": {
+      "before": 9.753996,
+      "after": 8.83592125,
+      "saved": 0.9180747500000006,
+      "saved_percent": 9.412293689683704,
+      "saved_ci95": [
+        0.5327400000000004,
+        4.1491630000000015
+      ],
+      "faster_pairs": 7,
+      "before_process_range": [
+        9.3294025,
+        13.059569
+      ],
+      "after_process_range": [
+        8.584221,
+        12.72565
+      ]
+    },
+    "baseline": {
+      "draw_p95_ms": 12.200702524999997,
+      "draw_p99_ms": 14.571121374999993,
+      "submit_p50_ms": 0.47664949999999995,
+      "submit_p95_ms": 0.54078,
+      "interval_p50_ms": 11.2837325,
+      "interval_p95_ms": 16.104951,
+      "interval_p99_ms": 18.581965399999998,
+      "long_interval_percent": 100.0,
+      "total_presents": 4800
+    },
+    "patched": {
+      "draw_p95_ms": 11.011285224999998,
+      "draw_p99_ms": 13.8409252,
+      "submit_p50_ms": 0.46975449999999996,
+      "submit_p95_ms": 0.5412707499999999,
+      "interval_p50_ms": 10.306404,
+      "interval_p95_ms": 14.661686500000002,
+      "interval_p99_ms": 17.17576894999999,
+      "long_interval_percent": 97.32888146911519,
+      "total_presents": 4800
+    }
+  },
+  {
+    "case": "wrap",
+    "mode": "redraw",
+    "pairs": 8,
+    "all_windows_active": true,
+    "present_fps": {
+      "before": 169.97662653013447,
+      "after": 169.99977086359507,
+      "before_process_range": [
+        169.70468475508028,
+        170.0414373922006
+      ],
+      "after_process_range": [
+        169.6883474377537,
+        170.06835212597568
+      ]
+    },
+    "fps_increase": 0.02314433346060696,
+    "fps_increase_ci95": [
+      -0.01638690825973299,
+      0.23287911703374675
+    ],
+    "fps_increase_percent": 0.013616185903364553,
+    "fps_higher_pairs": 5,
+    "all_hardware_rendered": true,
+    "environment": {
+      "window_bounds": "Bounds { origin: Point { x: 0px, y: 0px }, size: Size { 800px \u00d7 600px } }",
+      "scale_factor": 1.75,
+      "gpu": {
+        "is_software_emulated": false,
+        "device_name": "AMD Radeon RX 7900 XTX (RADV NAVI31)",
+        "driver_name": "radv",
+        "driver_info": "Mesa 26.2.1-arch1.1"
+      },
+      "source_bytes": 8158,
+      "declared_refresh_hz": 170.0
+    },
+    "draw_ms": {
+      "before": 2.0323670000000003,
+      "after": 2.04309175,
+      "saved": -0.010724749999999617,
+      "saved_percent": -0.5276975073891466,
+      "saved_ci95": [
+        -0.020149999999999668,
+        0.03129000000000026
+      ],
+      "faster_pairs": 3,
+      "before_process_range": [
+        1.9781714999999997,
+        2.089902
+      ],
+      "after_process_range": [
+        1.994932,
+        2.0588914999999997
+      ]
+    },
+    "baseline": {
+      "draw_p95_ms": 2.3585342249999997,
+      "draw_p99_ms": 3.1034256449999997,
+      "submit_p50_ms": 0.38847375,
+      "submit_p95_ms": 0.42204122499999996,
+      "interval_p50_ms": 5.8735495,
+      "interval_p95_ms": 6.8505865,
+      "interval_p99_ms": 7.2630610099999995,
+      "long_interval_percent": 0.0,
+      "total_presents": 4800
+    },
+    "patched": {
+      "draw_p95_ms": 2.3620215249999994,
+      "draw_p99_ms": 3.3006944599999994,
+      "submit_p50_ms": 0.3894145,
+      "submit_p95_ms": 0.42097202499999997,
+      "interval_p50_ms": 5.8730645,
+      "interval_p95_ms": 6.87825305,
+      "interval_p99_ms": 7.327406799999999,
+      "long_interval_percent": 0.0,
+      "total_presents": 4800
+    }
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "raw_data_and_source_hashes_match": true,
+  "user_node_patch_unchanged": true,
+  "before_after_display_settings_equal": true,
+  "included_processes": 68,
+  "included_presents": 40800,
+  "all_valid_processes_active_and_hardware_rendered": true,
+  "bilingual_report_numbers_match_summary": true,
+  "local_markdown_links_exist": true,
+  "artifact_sha256": {
+    "native-gpu-results/summary.json": "f81d4d3b6fcffa173d4ebb71a01c831e0648b1ba3e692ac442e6681752b67553",
+    "native-gpu-results/manifest.json": "d0def58ace584af9a3ab3ffb8659401c7662cc43066d39d56e2758c1aaac4310",
+    "native-display-before.json": "c248ce17a5502d3709b669ad4b473ecca4297afe33f7a254cbd525065df4155a",
+    "native-display-after.json": "c248ce17a5502d3709b669ad4b473ecca4297afe33f7a254cbd525065df4155a",
+    "native-gpu-environment.json": "f50994f355306b07e5696779bb5b29c15ec3e3c1e738574fa720c0703bd71044"
+  }
+}

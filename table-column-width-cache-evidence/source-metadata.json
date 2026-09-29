@@ -1,0 +1,12 @@
+{
+  "commit": "11b04d9bf09cec68c98ce97d759afc6776b1cda0",
+  "work": "/tmp/gpui-column-evidence-20260929/work",
+  "rustc": "rustc 1.98.0 (88d9e12ae 2026-08-18)\nbinary: rustc\ncommit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea\ncommit-date: 2026-08-18\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.0\nLLVM version: 22.1.8\n",
+  "files": {
+    "baseline-node.rs": "f0489963f28157c2f68b1ee614ea4341bd6c992bc6c7061a8c3bae9d3acb3b2a",
+    "patched-node.rs": "c30a9d84ddcb09a02cd21e035da5a105e918820a8ba9153018ff1fd7faa16a3d",
+    "change.patch": "09a13f940f9a38b9c79ac299b6a32c8004b0cce74b7f57c6073f4df44276f4e8",
+    "Cargo.lock": "755c3c33d49d8d1d443e4e484073d80b1c6d332bbcccd598bcf5e12dc16d4799",
+    "frame_probe.rs": "3340c2bbe4f98dae770bc607e97d2ddc8f0fc588d55ad1b924d8a0bc6899dcbf"
+  }
+}

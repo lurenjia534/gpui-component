@@ -1,0 +1,17 @@
+{
+  "wayland": {
+    "errno": 1,
+    "error": "[Errno 1] Operation not permitted"
+  },
+  "dev_dri_exists": false,
+  "glxinfo": {
+    "returncode": 255,
+    "stdout": "",
+    "stderr": "Error: unable to open display :1\n"
+  },
+  "vulkaninfo": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: [Loader Message] Code 0 : setup_loader_term_phys_devs:  Failed to detect any valid GPUs in the current config\nERROR at /usr/src/debug/vulkan-tools/Vulkan-Tools/vulkaninfo/./vulkaninfo.h:249:vkEnumeratePhysicalDevices failed with ERROR_INITIALIZATION_FAILED\n"
+  }
+}

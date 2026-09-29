@@ -1,0 +1,23 @@
+{
+  "command": [
+    "cargo",
+    "build",
+    "--offline",
+    "--locked",
+    "--release",
+    "-p",
+    "gpui-base",
+    "--example",
+    "column_width_native",
+    "--message-format=json",
+    "-j",
+    "12"
+  ],
+  "rustc": "rustc 1.98.0 (88d9e12ae 2026-08-18)\nbinary: rustc\ncommit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea\ncommit-date: 2026-08-18\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.0\nLLVM version: 22.1.8\n",
+  "sha256": {
+    "baseline-node.rs": "f0489963f28157c2f68b1ee614ea4341bd6c992bc6c7061a8c3bae9d3acb3b2a",
+    "native_probe.rs": "4f20313045b854b13a3d7dd701d7feaf72f719730c3c9afa9d43cfb4a43d63bb",
+    "Cargo.lock": "755c3c33d49d8d1d443e4e484073d80b1c6d332bbcccd598bcf5e12dc16d4799",
+    "bin/native-baseline": "65efa09d5846c0b4db11e34f51c62f17a5f6d84d6b5e61ce4796bfacc250ab44"
+  }
+}

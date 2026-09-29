@@ -1,0 +1,57 @@
+{
+  "selection_rule": "All completed active-window A/B pairs from supplied batches; no timing-based exclusions",
+  "inputs": [
+    {
+      "path": "native-gpu-full/native.jsonl",
+      "sha256": "d03a216900361bf4231fa73208965752232274ce543631ebd5253e330df75432"
+    },
+    {
+      "path": "native-gpu-large-redraw/native.jsonl",
+      "sha256": "1c57ac14c6df10b78e46a3d13554c613534fa6efc926a1e3ca40b7be172c6915"
+    },
+    {
+      "path": "native-gpu-large-scroll/native.jsonl",
+      "sha256": "288f880187ec534349a71dfaf3b27602a82f8c8e3907a050f9f81188ee0942e6"
+    },
+    {
+      "path": "native-gpu-wrap/native.jsonl",
+      "sha256": "000fdc675e0f43f290291e3cfc1380756560f40ca120e23eb7505184ab99bed3"
+    }
+  ],
+  "excluded_records": [
+    {
+      "path": "native-gpu-full/native.jsonl",
+      "line": 21,
+      "run": 2,
+      "variant": "baseline",
+      "case": "large",
+      "mode": "redraw",
+      "inactive_samples": 397,
+      "reason": "Pair contains a run that lost focus; original data retained"
+    }
+  ],
+  "included_processes": 68,
+  "measured_presents": 40800,
+  "measured_intervals": 40732,
+  "final_geometry_matches_by_case": true,
+  "pairs": {
+    "medium/scroll": 8,
+    "large/redraw": 10,
+    "large/scroll": 8,
+    "wrap/redraw": 8
+  },
+  "environment": "../native-gpu-environment.json",
+  "native_jsonl_sha256": "b1ad4097ce1e82725aa01843c72bb9b2dbbef1461463334e3da463d171df309d",
+  "source_hashes": {
+    "assemble_native.py": "e0e3658b33e923eee386794ce4d205cfc209de79a42a7de7859bdbc491e8f861",
+    "analyze_followup.py": "6944362bdad788c126ad483f0106a21824eb0b250ee39ac32f6a37c6b36cbc5d",
+    "native_probe.rs": "4f20313045b854b13a3d7dd701d7feaf72f719730c3c9afa9d43cfb4a43d63bb",
+    "native.py": "2aa01c853e54e31d4beaf8a8c4ea713f643c9a6540b7e1afe4cf7ba970ce4ba6",
+    "baseline-node.rs": "f0489963f28157c2f68b1ee614ea4341bd6c992bc6c7061a8c3bae9d3acb3b2a",
+    "patched-node.rs": "c30a9d84ddcb09a02cd21e035da5a105e918820a8ba9153018ff1fd7faa16a3d"
+  },
+  "binaries": {
+    "baseline": "65efa09d5846c0b4db11e34f51c62f17a5f6d84d6b5e61ce4796bfacc250ab44",
+    "patched": "c1df514a6ef1a006476ce5982c8f05e8257b5cea948ec334353f2f0d831f8ddb"
+  }
+}

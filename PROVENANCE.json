@@ -1,0 +1,18 @@
+{
+  "measurement_baseline": "11b04d9bf09cec68c98ce97d759afc6776b1cda0",
+  "submission_parent": "4f861e8a0654064fa53255cf8d9597bb9d5ef826",
+  "code_commit": "de586ce32f2e8bc6d3047897bf234ba66584544d",
+  "code_branch": "perf/table-column-width-cache",
+  "evidence_branch": "evidence/table-column-width-cache-20260929",
+  "scope": "Only crates/base/src/text/node.rs in the code PR; independent orphan branch for evidence",
+  "measurement_vs_submission": "Measurements remain on the frozen original baseline. The submission is based on the latest fetched upstream commit. node.rs and the lockfile did not change between these bases. Functional tests, formatting and lib/tests Clippy were rerun on the submission base; performance was not rerun.",
+  "documentation": "English publication copies; original Chinese reports remain in the local checkout. CJK fixture text and source snapshots are preserved as measured inputs.",
+  "omitted_local_artifacts": [
+    "Compiled binaries (about 218 MiB)",
+    "Python bytecode caches",
+    "Machine-local work-directory selector",
+    "Cargo build JSON event streams"
+  ],
+  "retained_artifacts": "Frozen source and patch, lockfile, probes, scripts, plans, all measured samples and raw process outputs, summaries, build metadata, compiler stderr and validation logs",
+  "draft_reason": "The cache does not observe same-window dynamic font installation generation; correctness of that invalidation boundary remains unresolved."
+}

@@ -1,0 +1,38 @@
+{
+  "outputs": [
+    {
+      "name": "DP-3",
+      "currentMode": {
+        "id": "2",
+        "name": "3840x2160@170",
+        "refreshRate": 170,
+        "size": {
+          "height": 2160,
+          "width": 3840
+        }
+      },
+      "scale": 1.75,
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "hdr": false
+    }
+  ],
+  "screen": {
+    "currentSize": {
+      "height": 1234,
+      "width": 2194
+    },
+    "id": 0,
+    "maxActiveOutputsCount": 1,
+    "maxSize": {
+      "height": 64000,
+      "width": 64000
+    },
+    "minSize": {
+      "height": 0,
+      "width": 0
+    }
+  }
+}

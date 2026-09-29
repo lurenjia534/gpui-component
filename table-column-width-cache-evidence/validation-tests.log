@@ -1,0 +1,10 @@
+
+running 5 tests
+test text::node::tests::table_column_of_inline_code_cells_fits_the_mono_width ... ok
+test text::node::tests::table_column_uses_prepared_inline_metrics_after_resource_update ... ok
+test text::node::tests::table_columns_cache_is_rebuilt_for_reparsed_tables ... ok
+test text::node::tests::table_columns_cache_preserves_plain_widths_and_clones ... ok
+test text::node::tests::table_columns_cache_tracks_typography ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 1243 filtered out; finished in 0.00s
+

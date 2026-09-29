@@ -1,0 +1,86 @@
+{
+  "gpu": {
+    "is_software_emulated": false,
+    "device_name": "AMD Radeon RX 7900 XTX (RADV NAVI31)",
+    "driver_name": "radv",
+    "driver_info": "Mesa 26.2.1-arch1.1"
+  },
+  "scale_factor": 1.75,
+  "display": "Some(WaylandDisplay { id: ObjectId(wl_output@5), name: Some(\"DP-3\"), bounds: Bounds { origin: Point { x: 0px, y: 0px }, size: Size { 1920px \u00d7 1080px } } })",
+  "window_bounds": "Bounds { origin: Point { x: 0px, y: 0px }, size: Size { 800px \u00d7 600px } }",
+  "kscreen": {
+    "outputs": [
+      {
+        "name": "DP-3",
+        "currentMode": {
+          "id": "2",
+          "name": "3840x2160@170",
+          "refreshRate": 170,
+          "size": {
+            "height": 2160,
+            "width": 3840
+          }
+        },
+        "scale": 1.75,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "hdr": false
+      }
+    ],
+    "screen": {
+      "currentSize": {
+        "height": 1234,
+        "width": 2194
+      },
+      "id": 0,
+      "maxActiveOutputsCount": 1,
+      "maxSize": {
+        "height": 64000,
+        "width": 64000
+      },
+      "minSize": {
+        "height": 0,
+        "width": 0
+      }
+    }
+  },
+  "stored_matching_kwin_settings": [
+    {
+      "mode": {
+        "flags": 0,
+        "height": 2160,
+        "refreshRate": 170000,
+        "width": 3840
+      },
+      "scale": 1.75,
+      "vrrPolicy": "Never"
+    }
+  ],
+  "uname": {
+    "system": "Linux",
+    "node": "arch-bigPC",
+    "release": "7.1.9-arch1-2",
+    "version": "#1 SMP PREEMPT_DYNAMIC Fri, 21 Aug 2026 22:18:59 +0000",
+    "machine": "x86_64",
+    "processor": ""
+  },
+  "cpu_pinning": null,
+  "warmup_presents": 120,
+  "measured_presents": 600,
+  "pairs_per_case": 8,
+  "cases": [
+    "medium/scroll",
+    "large/redraw",
+    "large/scroll",
+    "wrap/redraw"
+  ],
+  "instrumentation": "GPUI profiler Draw/Present; application submission timestamps, not physical scanout confirmation",
+  "source_hashes": {
+    "native_probe.rs": "4f20313045b854b13a3d7dd701d7feaf72f719730c3c9afa9d43cfb4a43d63bb",
+    "native.py": "2aa01c853e54e31d4beaf8a8c4ea713f643c9a6540b7e1afe4cf7ba970ce4ba6",
+    "baseline-node.rs": "f0489963f28157c2f68b1ee614ea4341bd6c992bc6c7061a8c3bae9d3acb3b2a",
+    "patched-node.rs": "c30a9d84ddcb09a02cd21e035da5a105e918820a8ba9153018ff1fd7faa16a3d"
+  }
+}

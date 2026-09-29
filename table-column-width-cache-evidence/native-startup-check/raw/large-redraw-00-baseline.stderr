@@ -1,0 +1,4 @@
+
+thread 'main' (4) panicked at /home/luren/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/gpui-pre-linux-0.3.7/src/linux/wayland/client.rs:839:49:
+called `Result::unwrap()` on an `Err` value: NoCompositor
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

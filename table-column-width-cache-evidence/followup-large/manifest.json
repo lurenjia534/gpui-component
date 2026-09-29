@@ -1,0 +1,12 @@
+{
+  "sha256": {
+    "large.jsonl": "15a4a69e78037b8b139106a3e5095b72133bf8820989b048134d7384a1371c46",
+    "summary.json": "58304bfd50a266a5ccfd58b5c6170be573f9faf97f73f72a7ebe183aa06467a1"
+  },
+  "processes": 96,
+  "timed_frames": 23040,
+  "cpu": 4,
+  "governor": "performance",
+  "scaling_driver": "amd-pstate-epp",
+  "old_binaries_verified": true
+}

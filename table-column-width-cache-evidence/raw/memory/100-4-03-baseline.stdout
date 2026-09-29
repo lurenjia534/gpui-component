@@ -1,0 +1,7 @@
+
+running 1 test
+test text::node::column_width_evidence::retained_tables ... WIDTH_JSON {"tables":100,"cols":4,"before":{"rss_kib":25960,"heap_used":1256944,"mmap_bytes":6795280},"allocated":{"rss_kib":26352,"heap_used":1494832,"mmap_bytes":6795280},"measured":{"rss_kib":26356,"heap_used":1495408,"mmap_bytes":6795280},"repeated":{"rss_kib":26360,"heap_used":1495824,"mmap_bytes":6795280},"released":{"rss_kib":26360,"heap_used":1274976,"mmap_bytes":6795280},"table_bytes":88,"exact":null}
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 1243 filtered out; finished in 0.07s
+
