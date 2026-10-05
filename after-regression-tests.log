@@ -1,0 +1,12 @@
+   Compiling gpui-base v0.7.1 (/tmp/gpui-kit-3368-before/crates/base)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 14.53s
+     Running unittests src/lib.rs (/home/luren/Code/rust/gpui-component/target/debug/deps/gpui_base-f2fc7048c58ccd2f)
+
+running 4 tests
+test text::format::markdown::tests::custom_block_plugin_registers_parser_and_renderer ... ok
+test text::text_view::tests::block_plugin_selection::block_plugin_virtual_anchor_survives_scrolling_and_clears_offscreen ... ok
+test text::text_view::tests::block_plugin_selection::block_plugin_clicks_empty_endpoints_and_clear_do_not_copy_it ... ok
+test text::text_view::tests::block_plugin_selection::block_plugin_endpoints_copy_atomically_in_both_formats ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 1312 filtered out; finished in 0.06s
+

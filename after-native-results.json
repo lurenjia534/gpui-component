@@ -1,0 +1,162 @@
+[
+  {
+    "version": "after",
+    "format": "Plain",
+    "scenario": "intro-to-formula",
+    "expected": "Intro\nx",
+    "clipboard": "Intro\nx",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Plain",
+    "scenario": "formula-to-intro",
+    "expected": "Intro\nx",
+    "clipboard": "Intro\nx",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Plain",
+    "scenario": "formula-to-after",
+    "expected": "x\nAfter",
+    "clipboard": "x\nAfter",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Plain",
+    "scenario": "after-to-formula",
+    "expected": "x\nAfter",
+    "clipboard": "x\nAfter",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Plain",
+    "scenario": "inside-formula",
+    "expected": "x",
+    "clipboard": "x",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Plain",
+    "scenario": "inside-formula-reverse",
+    "expected": "x",
+    "clipboard": "x",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Plain",
+    "scenario": "across-formula",
+    "expected": "Intro\nx\nAfter",
+    "clipboard": "Intro\nx\nAfter",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Plain",
+    "scenario": "across-formula-reverse",
+    "expected": "Intro\nx\nAfter",
+    "clipboard": "Intro\nx\nAfter",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Plain",
+    "scenario": "intro-only",
+    "expected": "Intro",
+    "clipboard": "Intro",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Plain",
+    "scenario": "click-only",
+    "expected": "SENTINEL_NO_COPY",
+    "clipboard": "SENTINEL_NO_COPY",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Source",
+    "scenario": "intro-to-formula",
+    "expected": "Intro\n\n$$\nx\n$$",
+    "clipboard": "Intro\n\n$$\nx\n$$",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Source",
+    "scenario": "formula-to-intro",
+    "expected": "Intro\n\n$$\nx\n$$",
+    "clipboard": "Intro\n\n$$\nx\n$$",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Source",
+    "scenario": "formula-to-after",
+    "expected": "$$\nx\n$$\n\nAfter",
+    "clipboard": "$$\nx\n$$\n\nAfter",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Source",
+    "scenario": "after-to-formula",
+    "expected": "$$\nx\n$$\n\nAfter",
+    "clipboard": "$$\nx\n$$\n\nAfter",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Source",
+    "scenario": "inside-formula",
+    "expected": "$$\nx\n$$",
+    "clipboard": "$$\nx\n$$",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Source",
+    "scenario": "inside-formula-reverse",
+    "expected": "$$\nx\n$$",
+    "clipboard": "$$\nx\n$$",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Source",
+    "scenario": "across-formula",
+    "expected": "Intro\n\n$$\nx\n$$\n\nAfter",
+    "clipboard": "Intro\n\n$$\nx\n$$\n\nAfter",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Source",
+    "scenario": "across-formula-reverse",
+    "expected": "Intro\n\n$$\nx\n$$\n\nAfter",
+    "clipboard": "Intro\n\n$$\nx\n$$\n\nAfter",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Source",
+    "scenario": "intro-only",
+    "expected": "Intro",
+    "clipboard": "Intro",
+    "passes": true
+  },
+  {
+    "version": "after",
+    "format": "Source",
+    "scenario": "click-only",
+    "expected": "SENTINEL_NO_COPY",
+    "clipboard": "SENTINEL_NO_COPY",
+    "passes": true
+  }
+]

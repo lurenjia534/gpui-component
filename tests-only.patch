@@ -1,0 +1,326 @@
+diff --git a/crates/base/src/text/text_view.rs b/crates/base/src/text/text_view.rs
+index 7a1c3fdee65ee85ec0a11654092559c5468ec798..7f5249b1f57172b1c1d826f82cf92be3bb411123 100644
+--- a/crates/base/src/text/text_view.rs
++++ b/crates/base/src/text/text_view.rs
+@@ -1155,6 +1155,321 @@ mod tests {
+         }
+     }
+ 
++    mod block_plugin_selection {
++        use super::*;
++        use crate::text::{MarkdownNode, MarkdownParseContext, MarkdownPlugin, SelectionFormat};
++        use gpui::{App, Point};
++
++        const SOURCE: &str = "Intro\n\n$$\nx\n$$\n\nAfter";
++        const MATH_SOURCE: &str = "$$\nx\n$$";
++
++        struct MathPlugin {
++            clicks: Arc<AtomicUsize>,
++            height: Pixels,
++        }
++
++        impl MarkdownPlugin for MathPlugin {
++            fn name(&self) -> &str {
++                "selection-test-math"
++            }
++
++            fn is_block(&self) -> bool {
++                true
++            }
++
++            fn parse(
++                &self,
++                node: &markdown::mdast::Node,
++                _: &MarkdownParseContext<'_>,
++            ) -> Option<MarkdownNode> {
++                let markdown::mdast::Node::Math(_) = node else {
++                    return None;
++                };
++                Some(
++                    MarkdownNode::new(self.name(), ())
++                        .text("x²")
++                        .markdown(MATH_SOURCE),
++                )
++            }
++
++            fn render(&self, _: &MarkdownNode, _: &mut Window, _: &mut App) -> impl IntoElement {
++                let clicks = self.clicks.clone();
++                // Deliberately no text run: copying must come from the plugin,
++                // not from a selectable label inside its presentation.
++                div()
++                    .id("selection-test-math")
++                    .debug_selector(|| "selection-test-math".into())
++                    .w(px(120.))
++                    .h(self.height)
++                    .on_click(move |_, _, _| {
++                        clicks.fetch_add(1, Ordering::Relaxed);
++                    })
++            }
++        }
++
++        struct Root {
++            view: Entity<TextViewState>,
++            clicks: Arc<AtomicUsize>,
++            format: SelectionFormat,
++            scrollable: bool,
++            selectable: bool,
++            block_height: Pixels,
++        }
++
++        impl Root {
++            fn new(source: &str, cx: &mut Context<Self>) -> Self {
++                Self {
++                    view: cx.new(|cx| TextViewState::markdown(source, cx)),
++                    clicks: Arc::default(),
++                    format: SelectionFormat::Plain,
++                    scrollable: false,
++                    selectable: true,
++                    block_height: px(48.),
++                }
++            }
++        }
++
++        impl Render for Root {
++            fn render(&mut self, _: &mut Window, _: &mut Context<Self>) -> impl IntoElement {
++                div()
++                    .w(px(320.))
++                    .h(px(180.))
++                    .overflow_hidden()
++                    .child(crate::TextSelectionLayer)
++                    .child(
++                        TextView::new(&self.view)
++                            .scrollable(self.scrollable)
++                            .selectable(self.selectable)
++                            .selection_format(self.format)
++                            .plugin(MathPlugin {
++                                clicks: self.clicks.clone(),
++                                height: self.block_height,
++                            }),
++                    )
++            }
++        }
++
++        fn settle(cx: &mut VisualTestContext) {
++            for _ in 0..2 {
++                cx.run_until_parked();
++                cx.update(|window, cx| window.draw(cx).clear(cx));
++            }
++        }
++
++        fn drag(cx: &mut VisualTestContext, start: Point<Pixels>, end: Point<Pixels>) {
++            cx.simulate_mouse_down(start, MouseButton::Left, Modifiers::default());
++            settle(cx);
++            cx.simulate_mouse_move(end, MouseButton::Left, Modifiers::default());
++            settle(cx);
++            cx.simulate_mouse_up(end, MouseButton::Left, Modifiers::default());
++            settle(cx);
++        }
++
++        fn assert_copy(cx: &mut VisualTestContext, expected: &str) {
++            cx.update(|window, cx| {
++                assert_eq!(
++                    crate::TextSelection::selected_text(window, cx).trim(),
++                    expected
++                );
++                cx.write_to_clipboard(gpui::ClipboardItem::new_string("sentinel".into()));
++                window.dispatch_action(Box::new(crate::input::Copy), cx);
++            });
++            settle(cx);
++            cx.update(|_, cx| {
++                assert_eq!(
++                    cx.read_from_clipboard().and_then(|item| item.text()),
++                    Some(expected.to_string())
++                );
++            });
++        }
++
++        #[gpui::test]
++        fn block_plugin_endpoints_copy_atomically_in_both_formats(cx: &mut TestAppContext) {
++            cx.update(crate::init);
++            let (root, cx) = cx.add_window_view(|_, cx| Root::new(SOURCE, cx));
++            for scrollable in [false, true] {
++                for format in [SelectionFormat::Plain, SelectionFormat::Source] {
++                    root.update(cx, |root, cx| {
++                        root.scrollable = scrollable;
++                        root.format = format;
++                        cx.notify();
++                    });
++                    settle(cx);
++                    let view = root.read_with(cx, |root, _| root.view.clone());
++                    let regions =
++                        view.read_with(cx, |view, _| view.selection_adapter.text_bounds());
++                    let first = regions.first().unwrap();
++                    let last = regions.last().unwrap();
++                    let left = point(first.left() + px(0.1), first.center().y);
++                    let right = point(last.right() - px(0.1), last.center().y);
++                    let block = cx.debug_bounds("selection-test-math").unwrap();
++                    // Both points are left of the midpoint. Treating the whole
++                    // block as one wide glyph would miss this drag.
++                    let inside = point(block.left() + px(4.), block.top() + px(4.));
++                    let inside_end = point(block.left() + px(8.), block.top() + px(12.));
++                    let (math, separator) = match format {
++                        SelectionFormat::Plain => ("x²", "\n"),
++                        SelectionFormat::Source => (MATH_SOURCE, "\n\n"),
++                    };
++                    for (start, end, expected) in [
++                        (left, inside, format!("Intro{separator}{math}")),
++                        (inside, right, format!("{math}{separator}After")),
++                        (inside, inside_end, math.to_string()),
++                        (
++                            left,
++                            right,
++                            format!("Intro{separator}{math}{separator}After"),
++                        ),
++                    ] {
++                        for (start, end) in [(start, end), (end, start)] {
++                            drag(cx, start, end);
++                            assert_eq!(
++                                view.read_with(cx, |view, _| view.selected_text()).trim(),
++                                expected,
++                                "format={format:?}, scrollable={scrollable}, start={start:?}, end={end:?}"
++                            );
++                            assert_copy(cx, &expected);
++                        }
++                    }
++                    drag(cx, inside, inside_end);
++                    let offset = SOURCE.find(MATH_SOURCE).unwrap();
++                    assert_eq!(
++                        view.read_with(cx, |view, _| view.selected_source_range()),
++                        Some(offset..offset + MATH_SOURCE.len())
++                    );
++                }
++            }
++        }
++
++        #[gpui::test]
++        fn block_plugin_clicks_empty_endpoints_and_clear_do_not_copy_it(cx: &mut TestAppContext) {
++            cx.update(crate::init);
++            let (root, cx) = cx.add_window_view(|_, cx| Root::new(SOURCE, cx));
++            settle(cx);
++            let view = root.read_with(cx, |root, _| root.view.clone());
++            let block = cx.debug_bounds("selection-test-math").unwrap();
++            let inside = point(block.left() + px(4.), block.top() + px(4.));
++            cx.simulate_mouse_down(inside, MouseButton::Left, Modifiers::default());
++            settle(cx);
++            cx.simulate_mouse_up(inside, MouseButton::Left, Modifiers::default());
++            settle(cx);
++            assert_eq!(
++                root.read_with(cx, |root, _| root.clicks.load(Ordering::Relaxed)),
++                1
++            );
++            assert!(view.read_with(cx, |view, _| view.selected_text()).is_empty());
++            cx.update(|window, cx| {
++                assert!(crate::TextSelection::selected_text(window, cx).is_empty());
++            });
++
++            for scrollable in [false, true] {
++                root.update(cx, |root, cx| {
++                    root.scrollable = scrollable;
++                    cx.notify();
++                });
++                settle(cx);
++                let block = cx.debug_bounds("selection-test-math").unwrap();
++                let regions = view.read_with(cx, |view, _| view.selection_adapter.text_bounds());
++                let first = regions.first().unwrap();
++                let last = regions.last().unwrap();
++                drag(
++                    cx,
++                    point(first.left() + px(0.1), first.center().y),
++                    point(first.right() - px(0.1), first.center().y),
++                );
++                assert_copy(cx, "Intro");
++                // An endpoint beside, rather than inside, the formula must not
++                // make the virtual endpoint fallback include its entire text.
++                drag(
++                    cx,
++                    point(last.right() - px(0.1), last.center().y),
++                    point(block.right() + px(8.), block.center().y),
++                );
++                assert_copy(cx, "After");
++            }
++
++            let block = cx.debug_bounds("selection-test-math").unwrap();
++            drag(
++                cx,
++                point(block.left() + px(4.), block.top() + px(4.)),
++                point(block.left() + px(8.), block.top() + px(12.)),
++            );
++            assert_copy(cx, "x²");
++            root.update(cx, |root, cx| {
++                root.block_height = px(64.);
++                root.view
++                    .update(cx, |view, cx| view.invalidate_inline_layout(cx));
++                cx.notify();
++            });
++            settle(cx);
++            assert_copy(cx, "x²");
++            view.update(cx, |view, cx| {
++                view.clear_selection(cx);
++                // No repaint is needed to clear the retained atomic state.
++                assert!(view.selected_text().is_empty());
++                assert_eq!(view.selected_source_range(), None);
++            });
++            root.update(cx, |root, cx| {
++                root.selectable = false;
++                cx.notify();
++            });
++            settle(cx);
++            let block = cx.debug_bounds("selection-test-math").unwrap();
++            drag(
++                cx,
++                point(block.left() + px(4.), block.top() + px(4.)),
++                point(block.left() + px(8.), block.top() + px(12.)),
++            );
++            assert!(view.read_with(cx, |view, _| view.selected_text()).is_empty());
++            cx.update(|window, cx| {
++                assert!(crate::TextSelection::selected_text(window, cx).is_empty());
++            });
++        }
++
++        #[gpui::test]
++        fn block_plugin_virtual_anchor_survives_scrolling_and_clears_offscreen(
++            cx: &mut TestAppContext,
++        ) {
++            cx.update(crate::init);
++            let paragraphs = (0..30)
++                .map(|i| format!("Paragraph {i}"))
++                .collect::<Vec<_>>();
++            let source = format!("{MATH_SOURCE}\n\n{}", paragraphs.join("\n\n"));
++            let (root, cx) = cx.add_window_view(|_, cx| {
++                let mut root = Root::new(&source, cx);
++                root.scrollable = true;
++                root
++            });
++            settle(cx);
++            let view = root.read_with(cx, |root, _| root.view.clone());
++            let block = cx.debug_bounds("selection-test-math").unwrap();
++            let start = point(block.left() + px(4.), block.top() + px(4.));
++            let end = point(block.left() + px(8.), block.top() + px(12.));
++            cx.simulate_mouse_down(start, MouseButton::Left, Modifiers::default());
++            settle(cx);
++            cx.simulate_mouse_move(end, MouseButton::Left, Modifiers::default());
++            settle(cx);
++            root.update(cx, |root, cx| {
++                root.view.read(cx).list_state().scroll_to_end();
++                cx.notify();
++            });
++            settle(cx);
++            let regions = view.read_with(cx, |view, _| view.selection_adapter.text_bounds());
++            let last = regions.last().unwrap();
++            let end = point(last.right() - px(0.1), last.center().y);
++            cx.simulate_mouse_move(end, MouseButton::Left, Modifiers::default());
++            settle(cx);
++            cx.simulate_mouse_up(end, MouseButton::Left, Modifiers::default());
++            settle(cx);
++            assert_copy(cx, &format!("x²\n{}", paragraphs.join("\n")));
++            cx.update(|window, cx| crate::TextSelection::clear(window, cx));
++            view.read_with(cx, |view, _| {
++                assert!(view.selected_text().is_empty());
++                assert_eq!(view.selected_source_range(), None);
++            });
++        }
++    }
++
+     struct InlinePluginTestRoot {
+         text_view: Entity<TextViewState>,
+         width: Pixels,

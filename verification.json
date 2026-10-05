@@ -1,0 +1,57 @@
+{
+  "issue": "https://github.com/longbridge/gpui-kit/issues/3368",
+  "baseline": "8d8cc6715e8f9f0765e8c1a0b005eb70f4c59b52",
+  "branch": "fix/text-view-block-plugin-selection",
+  "environment": "Linux native GPUI Markdown example; X11 display :96 supplied by Xvfb; OS mouse and keyboard events through XTest; actual X11 CLIPBOARD read after Ctrl+C; formulas rendered as MathJax SVG images.",
+  "screenshots": "Raw root-window captures. The gray panel is a separate temporary GTK clipboard inspection window displaying the value read from X11 CLIPBOARD, not a change to the GPUI example.",
+  "native_before": {
+    "passed": 12,
+    "failed": 8,
+    "total": 20
+  },
+  "native_after": {
+    "passed": 20,
+    "failed": 0,
+    "total": 20
+  },
+  "existing_text_tests": {
+    "passed": 334,
+    "failed": 0
+  },
+  "temporary_regressions": {
+    "location": "Isolated worktree /tmp/gpui-kit-3368-before; the temporary tests are absent from the submitted branch.",
+    "before": "Endpoint and empty-endpoint regressions fail; virtualization regression and existing parser test pass (2 failures, 2 passes).",
+    "after": "All three temporary regressions and the existing parser test pass (4 passes)."
+  },
+  "commit_scope": "Only the four fix files; no added tests or evidence files.",
+  "checks": {
+    "rustfmt": "passed",
+    "clippy": "passed with -D warnings",
+    "git_diff_check": "passed",
+    "native_example_build": "passed"
+  },
+  "binary_sha256": {
+    "before": "5281e35b8490c6ae91a2a49aa76be8c989f70316ec7aea005234bf2d700dc8db",
+    "after": "5c2d8c9df80c3a56c835c2608bdc12e12f157e05a504932c72767d8658d294b2"
+  },
+  "sha256": {
+    "before.png": "21817c1fe50a2e97d2617eaa655286e596236e0b5d0a3a66c5ccd7213910da18",
+    "after.png": "66648554393da3e4f0736aec4dfbb6f4b6067dacda11a67d1708831767f3ac89",
+    "before-native-results.json": "0d166013dcf9c70192b8e69d6be4e096e2c75d6a76686e929858697476a63b3a",
+    "after-native-results.json": "278fe9cc230ad1b6780946d1510fbc916f9b4916c0b38a1fe84e88652050df7f",
+    "before-screenshot-clipboard.json": "f13a72bded0f1fda9a6d411af093bab3216f641aeb24c105a070cc4f25a10160",
+    "after-screenshot-clipboard.json": "786e26acdc65100a9224bd325dc01298abcb05df87aafcc8fbfedf6af5f4c5e6",
+    "base-text-tests.log": "5e0c712f407ea66246c24f9709403b60fc8e3728ef90352dcae2611ba5ec6189",
+    "before-regression-tests.log": "44107596dc0509f5edccfcb85275a70ea2b2bf5768f14375c1e85d227a760d62",
+    "after-regression-tests.log": "27c6ea197924cb31454f34d224e9841be0d67a06b8e56bb621efed98688fe9ce",
+    "before-build.log": "dad6d1352de508833b5217ec4986e77fb89f961dd24d71195d07073b41cd31da",
+    "clippy.log": "505c19bc9626273ef5a6f6bcd053437f22b9e1029e733c2cfbc5302c08c4edce",
+    "native_ui.py": "f8275b9a9ce61e83541484d40b928fe428c963fda23fa332683fa58131cefd4f",
+    "native_suite.py": "018afeec1e712351eccd34f698ff9a566aa816df47a932f7b98fc124a6d08c54",
+    "clipboard_capture.py": "c861f71fa9ff4c7f31482415d17e4f21e3d1ac6d5e09c783c3152b29ec8395ef",
+    "fix.patch": "26476f283be5e4548d0086d156ee202225b33f124a9ee5f9982fc4768307d434",
+    "tests-only.patch": "028827da6b4dc4fe9bda89547761217bc4060680c946a24de090cfdd51e8c3af",
+    "after-build.log": "db0e1a829324d0f430ad65ed33f4bb4893394acc4cd24cb3add1f3d3cec02798"
+  },
+  "commit": "e7ab04450204abf8aeee3103c3816bb43a16b988"
+}

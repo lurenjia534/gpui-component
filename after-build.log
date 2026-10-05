@@ -1,0 +1,7 @@
+   Compiling gpui-base v0.7.1 (/home/luren/Code/rust/gpui-component/crates/base)
+   Compiling gpui-component v0.7.1 (/home/luren/Code/rust/gpui-component/crates/component)
+   Compiling gpui-shell v0.7.1 (/home/luren/Code/rust/gpui-component/crates/shell)
+   Compiling gpui-kit v0.7.1 (/home/luren/Code/rust/gpui-component/crates/kit)
+   Compiling gpui-component-story v0.7.1 (/home/luren/Code/rust/gpui-component/crates/story)
+   Compiling example-markdown v0.7.1 (/home/luren/Code/rust/gpui-component/examples/markdown)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 22.62s

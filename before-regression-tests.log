@@ -1,0 +1,30 @@
+   Compiling gpui-base v0.7.1 (/tmp/gpui-kit-3368-before/crates/base)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 16.41s
+     Running unittests src/lib.rs (/home/luren/Code/rust/gpui-component/target/debug/deps/gpui_base-f2fc7048c58ccd2f)
+
+running 4 tests
+test text::format::markdown::tests::custom_block_plugin_registers_parser_and_renderer ... ok
+
+thread 'text::text_view::tests::block_plugin_selection::block_plugin_endpoints_copy_atomically_in_both_formats' (105188) panicked at crates/base/src/text/text_view.rs:1326:29:
+assertion `left == right` failed: format=Plain, scrollable=false, start=Point { x: 0.1px, y: 13px }, end=Point { x: 4px, y: 42px }
+  left: "Intro"
+ right: "Intro\nx²"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test text::text_view::tests::block_plugin_selection::block_plugin_endpoints_copy_atomically_in_both_formats ... FAILED
+test text::text_view::tests::block_plugin_selection::block_plugin_virtual_anchor_survives_scrolling_and_clears_offscreen ... ok
+
+thread 'text::text_view::tests::block_plugin_selection::block_plugin_clicks_empty_endpoints_and_clear_do_not_copy_it' (105187) panicked at crates/base/src/text/text_view.rs:1270:17:
+assertion `left == right` failed
+  left: "x²\nAfter"
+ right: "After"
+test text::text_view::tests::block_plugin_selection::block_plugin_clicks_empty_endpoints_and_clear_do_not_copy_it ... FAILED
+
+failures:
+
+failures:
+    text::text_view::tests::block_plugin_selection::block_plugin_clicks_empty_endpoints_and_clear_do_not_copy_it
+    text::text_view::tests::block_plugin_selection::block_plugin_endpoints_copy_atomically_in_both_formats
+
+test result: FAILED. 2 passed; 2 failed; 0 ignored; 0 measured; 1312 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `-p gpui-base --lib`
