@@ -1,0 +1,93 @@
+{
+  "baseline_commit": "c0bebdc8a8cf9a74f9f52feaca278a52a9cfcca2",
+  "fixture_sha256": "74c83fbf766faae7e61120f8682af0bc1634440b9cf1e58e30f0ae096c2f3828",
+  "backend": "Native GPUI X11 via KDE XWayland on the real desktop",
+  "input": "KWin EIS / libei pointer and keyboard events",
+  "screenshot": "ImageMagick import of the actual native X11 client window",
+  "native_window_pixels": [
+    920,
+    620
+  ],
+  "test_results": {
+    "input-regressions": {
+      "passed": 575,
+      "failed": 0
+    },
+    "menu-tests": {
+      "passed": 4,
+      "failed": 0
+    }
+  },
+  "native_after_sources_match_workspace": true,
+  "verified_patch_sha256": "dc0b12ce1c62fc2fb3bfd9501b6e4e32e64fe78e6e3fef988b68d7401a006343",
+  "native_binary_sha256": {
+    "before": "49fdfd3f1f4b9cec7fb82508bd206fcbd780b58223a4ad80e0a3c76c180ccf22",
+    "after": "bf75fbf71a5d87a70d0510493330dde09bb0124b9c8f7dbfb2995782facb006f"
+  },
+  "visual_selection_checks": {
+    "input-menu": {
+      "selection_fill_pixel_count": {
+        "before": 0,
+        "after": 3258
+      },
+      "selection_fill_rgb": [
+        204,
+        227,
+        255
+      ]
+    },
+    "textarea-menu": {
+      "selection_fill_pixel_count": {
+        "before": 0,
+        "after": 2326
+      },
+      "selection_fill_rgb": [
+        204,
+        227,
+        255
+      ]
+    },
+    "textarea-submenu": {
+      "selection_fill_pixel_count": {
+        "before": 0,
+        "after": 2326
+      },
+      "selection_fill_rgb": [
+        204,
+        227,
+        255
+      ]
+    }
+  },
+  "native_flow_results": {
+    "copy": {
+      "sentinel_replaced": true,
+      "selection_matches_clipboard": true,
+      "text": "GPUI Kit selection stays visible.\nCopy this selected text using the context menu."
+    },
+    "paste": {
+      "pasted_into_destination": true,
+      "normalized_text_matches_clipboard": true,
+      "text": "GPUI Kit selection stays visible.Copy this selected text using the context menu."
+    },
+    "focus": {
+      "menu_closed_by_destination_click": true,
+      "typed_and_copied_destination_text": true
+    },
+    "escape": {
+      "escape_dismisses_submenu_chain": true,
+      "input_copy_shortcut_replaces_sentinel": true
+    }
+  },
+  "format_check": "passed",
+  "native_test_fixture": "Temporary application using the production Input, Textarea, NativeMenu, ContextMenu and PopupMenu implementations; not a Gallery build.",
+  "native_after_pid": 1248946,
+  "canonical_screenshot_sha256": {
+    "before-input-menu.png": "26e025fba5da98ebe096c4dee42de6debea19fabff68d7cb23774ddb3c24bdc3",
+    "after-input-menu.png": "cd7a314f794428d9c7d0f6aad2de58e0313b001916a7b500105bbc7f02b9c958",
+    "before-textarea-menu.png": "ce856761f209028104025c37b92e947b717ab218b0f172552e5b96bd2c573d1f",
+    "after-textarea-menu.png": "a745af27bc2f83e1334865a0cc1b3eed3cf4dee12c9430af542d315f2546dcc2",
+    "before-textarea-submenu.png": "38f9cc87023f45d8042e7e538e5f31e58a4bc5cea5980d5ac0ef19e5eb01f08f",
+    "after-textarea-submenu.png": "a19c9ba6f5f39ce026c7c3a52ed604b465e07306ebeee6e0edd98cf74f687cf1"
+  }
+}
