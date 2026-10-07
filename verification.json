@@ -1,0 +1,152 @@
+{
+  "issue": "https://github.com/longbridge/gpui-kit/issues/3334",
+  "baseline_commit": "dc00da1837f16a6da42280535d76a2d7acc4a40e",
+  "branch": "fix/settings-focus-ring-clipping",
+  "changed_source": "crates/component/src/setting/page.rs",
+  "environment": {
+    "platform": "Linux x86_64",
+    "gpui_pre": "0.3.8",
+    "display": "X11 / Xvfb",
+    "renderer": "Mesa Lavapipe Vulkan 26.2.4",
+    "display_scale": 1,
+    "rust": "1.98.0"
+  },
+  "checks": {
+    "cargo check --locked -p gpui-component --lib": "passed",
+    "cargo fmt -p gpui-component -- --check": "passed",
+    "cargo clippy --locked -p gpui-component --lib -- --deny warnings": "passed",
+    "cargo build --locked -p gpui-component-story": "passed for baseline and patched sources",
+    "git diff --check": "passed"
+  },
+  "interaction": {
+    "switch": "Pointer click focuses and toggles; Space restores light theme while retaining focus.",
+    "checkbox": "Tab from the focused Switch; unchanged unchecked state.",
+    "input": "Sidebar Other; click CLI Path and Ctrl+A; wait for scrollbar fade.",
+    "outline_and_fill": "Select variant; click Dark Mode switch and Space to return to light mode.",
+    "scroll_clip": "Normal; focus resettable Switch, restore its true state with Space; scroll content down four wheel notches so focused Switch leaves viewport.",
+    "dark_narrow": "Normal, select Appearance, resize to 1000x800, click Dark Mode."
+  },
+  "visual_results": [
+    {
+      "case": "normal-switch",
+      "size": [
+        1440,
+        1000
+      ],
+      "changed_pixels": 40,
+      "difference_bounds": [
+        1424,
+        260,
+        1427,
+        276
+      ],
+      "before": "before-normal-switch.png",
+      "after": "after-normal-switch.png"
+    },
+    {
+      "case": "normal-checkbox",
+      "size": [
+        1440,
+        1000
+      ],
+      "changed_pixels": 56,
+      "difference_bounds": [
+        1424,
+        317,
+        1427,
+        337
+      ],
+      "before": "before-normal-checkbox.png",
+      "after": "after-normal-checkbox.png"
+    },
+    {
+      "case": "normal-input",
+      "size": [
+        1440,
+        1000
+      ],
+      "changed_pixels": 188,
+      "difference_bounds": [
+        536,
+        922,
+        1427,
+        956
+      ],
+      "before": "before-normal-input.png",
+      "after": "after-normal-input.png"
+    },
+    {
+      "case": "normal-dark-narrow",
+      "size": [
+        1000,
+        800
+      ],
+      "changed_pixels": 40,
+      "difference_bounds": [
+        984,
+        260,
+        987,
+        276
+      ],
+      "before": "before-normal-dark-narrow.png",
+      "after": "after-normal-dark-narrow.png"
+    },
+    {
+      "case": "outline-switch",
+      "size": [
+        1440,
+        1000
+      ],
+      "changed_pixels": 0,
+      "difference_bounds": null,
+      "before": "before-outline-switch.png",
+      "after": "after-outline-switch.png"
+    },
+    {
+      "case": "fill-switch",
+      "size": [
+        1440,
+        1000
+      ],
+      "changed_pixels": 0,
+      "difference_bounds": null,
+      "before": "before-fill-switch.png",
+      "after": "after-fill-switch.png"
+    },
+    {
+      "case": "normal-scroll-clip",
+      "size": [
+        1440,
+        1000
+      ],
+      "changed_pixels": 0,
+      "difference_bounds": null,
+      "before": "before-normal-scroll-clip.png",
+      "after": "after-normal-scroll-clip.png"
+    }
+  ],
+  "limitations": [
+    "Windows and macOS were not executed.",
+    "Interface zoom and fractional display scaling were not executed."
+  ],
+  "files": {
+    "after-fill-switch.png": "ec377fac45909b9bbc11d4be5b8d7fce84c5d99de0a9f34891de6a8e7ed52cbe",
+    "after-normal-checkbox.png": "6785e28ec219c5dcae45c22020070bc1d97caeb6c30f05b75a92e04b97765fef",
+    "after-normal-dark-narrow.png": "a37660fc05ff7c89e028e36c22d50c3d22eb79bfd892b95501602d7cc2495dc8",
+    "after-normal-input.png": "fbeead426813f7d75634a9e8129794743332c5b580988f281f0f192dada557ba",
+    "after-normal-scroll-clip.png": "86067019433f7e7dde2f9cdb4e20411cd553f30f64c79acc20799cc7ab5fa943",
+    "after-normal-switch.png": "c1d08671c0275f5d8a6564cb69526cfbccfc98763da0054ccb5fde5948d35059",
+    "after-outline-switch.png": "3e858a9e9e30fb8481ca146073342414d824b8191563c13369c655071e3c5573",
+    "after-page.rs": "6259b60bfcf3964068d33b5f265a0bb091df89af24236c46286fd529d3336c43",
+    "before-fill-switch.png": "ec377fac45909b9bbc11d4be5b8d7fce84c5d99de0a9f34891de6a8e7ed52cbe",
+    "before-normal-checkbox.png": "782dd351acf76b0aa5a4dcaab4704a832663496c0331a65357e70e653f6d26a7",
+    "before-normal-dark-narrow.png": "40db11ed430f00b107fd33e8d418528963051f727277a3138fcca24d333d2e8b",
+    "before-normal-input.png": "1f0b05eaeb8e92fbdc04854d145a9c02a42612ec300a087d2e32c19ee3d06ec9",
+    "before-normal-scroll-clip.png": "86067019433f7e7dde2f9cdb4e20411cd553f30f64c79acc20799cc7ab5fa943",
+    "before-normal-switch.png": "eef70af082fe22787ddc49cbbfaed064d544ef9bbcb4ccf2fc5fce79cf4bfea7",
+    "before-outline-switch.png": "3e858a9e9e30fb8481ca146073342414d824b8191563c13369c655071e3c5573",
+    "before-page.rs": "fc8d2cfe4c951dfcbe77a398d4c88ca13eb3fe53485bb29735855d8d076aa199",
+    "comparison-normal.png": "542a3314a3621bdecd4e57a1e565ec3c307cecda912acbe37b43cbe681c4bd01",
+    "gpui-kit-3334-settings-focus-ring.patch": "5dadc34a7f596a4ad6758c6215cb68002d0ebdf1ce6729a416dd33afaf8008c2"
+  }
+}
