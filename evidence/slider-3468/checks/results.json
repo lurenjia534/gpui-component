@@ -1,0 +1,112 @@
+{
+  "base_commit": "8d4907da456a4f363c7ee1c22c553f44c3c58500",
+  "checks": [
+    {
+      "name": "slider-integration",
+      "command": [
+        "cargo",
+        "test",
+        "--locked",
+        "--offline",
+        "-p",
+        "gpui-kit",
+        "--features",
+        "test-support",
+        "--test",
+        "integration",
+        "slider_steps::"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "slider-unit",
+      "command": [
+        "cargo",
+        "test",
+        "--locked",
+        "--offline",
+        "-p",
+        "gpui-base",
+        "-p",
+        "gpui-component",
+        "--lib",
+        "slider::tests"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "libraries-check",
+      "command": [
+        "cargo",
+        "check",
+        "--locked",
+        "--offline",
+        "-p",
+        "gpui-base",
+        "-p",
+        "gpui-component",
+        "--lib"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "libraries-clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--locked",
+        "--offline",
+        "-p",
+        "gpui-base",
+        "-p",
+        "gpui-component",
+        "--lib",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "integration-clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--locked",
+        "--offline",
+        "-p",
+        "gpui-kit",
+        "--features",
+        "test-support",
+        "--test",
+        "integration",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "rustfmt",
+      "command": [
+        "rustfmt",
+        "--edition",
+        "2024",
+        "--check",
+        "crates/base/src/slider.rs",
+        "crates/component/src/slider.rs",
+        "crates/kit/tests/integration/slider_steps.rs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

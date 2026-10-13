@@ -1,0 +1,81 @@
+{
+  "base_commit": "8d4907da456a4f363c7ee1c22c553f44c3c58500",
+  "snapshot_directory": "/tmp/gpui-slider-3468-synced-pmegeuzq",
+  "patch_sha256": "a5345e14517d14c8d68ab1fe44c572a9ede3ad27c9c9af30dd7ddbd8b08564da",
+  "commands": [
+    {
+      "phase": "before",
+      "api_check_exit": 101,
+      "render_exit": 1
+    },
+    {
+      "phase": "after",
+      "api_check_exit": 0,
+      "render_exit": 0
+    }
+  ],
+  "before_name_checks": {
+    "light": {
+      "named": false,
+      "renamed": false,
+      "removed": true
+    },
+    "dark": {
+      "named": false,
+      "renamed": false,
+      "removed": true
+    }
+  },
+  "after_name_checks": {
+    "light": {
+      "named": true,
+      "renamed": true,
+      "removed": true
+    },
+    "dark": {
+      "named": true,
+      "renamed": true,
+      "removed": true
+    }
+  },
+  "unchanged_node_metadata": [
+    "role",
+    "element_identity_path",
+    "state_value",
+    "bounds"
+  ],
+  "control_pixel_comparisons": [
+    {
+      "theme": "light",
+      "dimensions": [
+        1600,
+        1440
+      ],
+      "changed_pixels": 0
+    },
+    {
+      "theme": "dark",
+      "dimensions": [
+        1600,
+        1440
+      ],
+      "changed_pixels": 0
+    }
+  ],
+  "png_sha256": {
+    "after-dark-controls.png": "3e793ad0d1f378d9902ad649e4e94928a3c9bd5d7231184f8f8f07f792a6371c",
+    "after-dark.png": "572197fd40c846d09e64e60d6d7468c02eed09439fa7291d4b1772247cf6e78e",
+    "after-light-controls.png": "40cf9b923b3e58338c449e306e4aa6817ab8eabce31845765f04363f79c3f77d",
+    "after-light.png": "e3cbaed69ea884ca1622361aa090b75e1d5d730817fe72d49dc425f319c4ec75",
+    "before-dark-controls.png": "3e793ad0d1f378d9902ad649e4e94928a3c9bd5d7231184f8f8f07f792a6371c",
+    "before-dark.png": "22c3bfb19ec8704cf55eba4cb41e73e6e74e89ed80dfd55ac72deef0b427a62f",
+    "before-light-controls.png": "40cf9b923b3e58338c449e306e4aa6817ab8eabce31845765f04363f79c3f77d",
+    "before-light.png": "9f4c08262ae06040361f1e5ccdf4de29421ac5f64c9c1ac51c71f41f495a6b7d"
+  },
+  "same_as_pre_sync_screenshots": true,
+  "limitations": [
+    "No native screen-reader speech validation",
+    "No macOS/Windows runtime validation",
+    "Review-only inspector outside production patch"
+  ]
+}

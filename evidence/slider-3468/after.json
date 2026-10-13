@@ -1,0 +1,409 @@
+{
+  "phase": "after",
+  "builder_api_enabled": true,
+  "renderer": "GPUI current_headless_renderer (Linux WGPU)",
+  "metadata_source": "GPUI write_a11y_info observed on existing Slider IDs",
+  "all_name_contracts_passed": true,
+  "results": [
+    {
+      "theme": "light",
+      "cases": [
+        {
+          "case": "named",
+          "expected_labels": [
+            "Corner radius",
+            "Padding scale"
+          ],
+          "passed": true,
+          "nodes": [
+            {
+              "layer": "Base",
+              "intended_name": "Corner radius",
+              "role": "Slider",
+              "label": "Corner radius",
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967298)]",
+              "state_value": 8.0,
+              "bounds": [
+                41.0,
+                193.5,
+                330.0,
+                28.0
+              ]
+            },
+            {
+              "layer": "Base",
+              "intended_name": "Padding scale",
+              "role": "Slider",
+              "label": "Padding scale",
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967299)]",
+              "state_value": 16.0,
+              "bounds": [
+                41.0,
+                268.0,
+                330.0,
+                28.0
+              ]
+            },
+            {
+              "layer": "Component",
+              "intended_name": "Corner radius",
+              "role": "Slider",
+              "label": "Corner radius",
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_component::slider::Slider\"), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967300)]",
+              "state_value": 8.0,
+              "bounds": [
+                429.0,
+                193.5,
+                330.0,
+                24.0
+              ]
+            },
+            {
+              "layer": "Component",
+              "intended_name": "Padding scale",
+              "role": "Slider",
+              "label": "Padding scale",
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_component::slider::Slider\"), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967301)]",
+              "state_value": 16.0,
+              "bounds": [
+                429.0,
+                264.0,
+                330.0,
+                24.0
+              ]
+            }
+          ]
+        },
+        {
+          "case": "renamed",
+          "expected_labels": [
+            "圆角",
+            "内边距"
+          ],
+          "passed": true,
+          "nodes": [
+            {
+              "layer": "Base",
+              "intended_name": "Corner radius",
+              "role": "Slider",
+              "label": "圆角",
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967298)]",
+              "state_value": 8.0,
+              "bounds": [
+                41.0,
+                193.5,
+                330.0,
+                28.0
+              ]
+            },
+            {
+              "layer": "Base",
+              "intended_name": "Padding scale",
+              "role": "Slider",
+              "label": "内边距",
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967299)]",
+              "state_value": 16.0,
+              "bounds": [
+                41.0,
+                268.0,
+                330.0,
+                28.0
+              ]
+            },
+            {
+              "layer": "Component",
+              "intended_name": "Corner radius",
+              "role": "Slider",
+              "label": "圆角",
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_component::slider::Slider\"), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967300)]",
+              "state_value": 8.0,
+              "bounds": [
+                429.0,
+                193.5,
+                330.0,
+                24.0
+              ]
+            },
+            {
+              "layer": "Component",
+              "intended_name": "Padding scale",
+              "role": "Slider",
+              "label": "内边距",
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_component::slider::Slider\"), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967301)]",
+              "state_value": 16.0,
+              "bounds": [
+                429.0,
+                264.0,
+                330.0,
+                24.0
+              ]
+            }
+          ]
+        },
+        {
+          "case": "removed",
+          "expected_labels": null,
+          "passed": true,
+          "nodes": [
+            {
+              "layer": "Base",
+              "intended_name": "Corner radius",
+              "role": "Slider",
+              "label": null,
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967298)]",
+              "state_value": 8.0,
+              "bounds": [
+                41.0,
+                193.5,
+                330.0,
+                28.0
+              ]
+            },
+            {
+              "layer": "Base",
+              "intended_name": "Padding scale",
+              "role": "Slider",
+              "label": null,
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967299)]",
+              "state_value": 16.0,
+              "bounds": [
+                41.0,
+                268.0,
+                330.0,
+                28.0
+              ]
+            },
+            {
+              "layer": "Component",
+              "intended_name": "Corner radius",
+              "role": "Slider",
+              "label": null,
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_component::slider::Slider\"), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967300)]",
+              "state_value": 8.0,
+              "bounds": [
+                429.0,
+                193.5,
+                330.0,
+                24.0
+              ]
+            },
+            {
+              "layer": "Component",
+              "intended_name": "Padding scale",
+              "role": "Slider",
+              "label": null,
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_component::slider::Slider\"), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967301)]",
+              "state_value": 16.0,
+              "bounds": [
+                429.0,
+                264.0,
+                330.0,
+                24.0
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "cases": [
+        {
+          "case": "named",
+          "expected_labels": [
+            "Corner radius",
+            "Padding scale"
+          ],
+          "passed": true,
+          "nodes": [
+            {
+              "layer": "Base",
+              "intended_name": "Corner radius",
+              "role": "Slider",
+              "label": "Corner radius",
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967298)]",
+              "state_value": 8.0,
+              "bounds": [
+                41.0,
+                193.5,
+                330.0,
+                28.0
+              ]
+            },
+            {
+              "layer": "Base",
+              "intended_name": "Padding scale",
+              "role": "Slider",
+              "label": "Padding scale",
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967299)]",
+              "state_value": 16.0,
+              "bounds": [
+                41.0,
+                268.0,
+                330.0,
+                28.0
+              ]
+            },
+            {
+              "layer": "Component",
+              "intended_name": "Corner radius",
+              "role": "Slider",
+              "label": "Corner radius",
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_component::slider::Slider\"), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967300)]",
+              "state_value": 8.0,
+              "bounds": [
+                429.0,
+                193.5,
+                330.0,
+                24.0
+              ]
+            },
+            {
+              "layer": "Component",
+              "intended_name": "Padding scale",
+              "role": "Slider",
+              "label": "Padding scale",
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_component::slider::Slider\"), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967301)]",
+              "state_value": 16.0,
+              "bounds": [
+                429.0,
+                264.0,
+                330.0,
+                24.0
+              ]
+            }
+          ]
+        },
+        {
+          "case": "renamed",
+          "expected_labels": [
+            "圆角",
+            "内边距"
+          ],
+          "passed": true,
+          "nodes": [
+            {
+              "layer": "Base",
+              "intended_name": "Corner radius",
+              "role": "Slider",
+              "label": "圆角",
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967298)]",
+              "state_value": 8.0,
+              "bounds": [
+                41.0,
+                193.5,
+                330.0,
+                28.0
+              ]
+            },
+            {
+              "layer": "Base",
+              "intended_name": "Padding scale",
+              "role": "Slider",
+              "label": "内边距",
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967299)]",
+              "state_value": 16.0,
+              "bounds": [
+                41.0,
+                268.0,
+                330.0,
+                28.0
+              ]
+            },
+            {
+              "layer": "Component",
+              "intended_name": "Corner radius",
+              "role": "Slider",
+              "label": "圆角",
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_component::slider::Slider\"), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967300)]",
+              "state_value": 8.0,
+              "bounds": [
+                429.0,
+                193.5,
+                330.0,
+                24.0
+              ]
+            },
+            {
+              "layer": "Component",
+              "intended_name": "Padding scale",
+              "role": "Slider",
+              "label": "内边距",
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_component::slider::Slider\"), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967301)]",
+              "state_value": 16.0,
+              "bounds": [
+                429.0,
+                264.0,
+                330.0,
+                24.0
+              ]
+            }
+          ]
+        },
+        {
+          "case": "removed",
+          "expected_labels": null,
+          "passed": true,
+          "nodes": [
+            {
+              "layer": "Base",
+              "intended_name": "Corner radius",
+              "role": "Slider",
+              "label": null,
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967298)]",
+              "state_value": 8.0,
+              "bounds": [
+                41.0,
+                193.5,
+                330.0,
+                28.0
+              ]
+            },
+            {
+              "layer": "Base",
+              "intended_name": "Padding scale",
+              "role": "Slider",
+              "label": null,
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967299)]",
+              "state_value": 16.0,
+              "bounds": [
+                41.0,
+                268.0,
+                330.0,
+                28.0
+              ]
+            },
+            {
+              "layer": "Component",
+              "intended_name": "Corner radius",
+              "role": "Slider",
+              "label": null,
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_component::slider::Slider\"), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967300)]",
+              "state_value": 8.0,
+              "bounds": [
+                429.0,
+                193.5,
+                330.0,
+                24.0
+              ]
+            },
+            {
+              "layer": "Component",
+              "intended_name": "Padding scale",
+              "role": "Slider",
+              "label": null,
+              "element_identity_path": "[View(EntityId(6v1)), Name(\"gpui_component::window_border::WindowBorder\"), Name(\"root\"), View(EntityId(1v1)), Name(\"gpui_component::slider::Slider\"), Name(\"gpui_base::slider::Slider\"), NamedInteger(\"slider\", 4294967301)]",
+              "state_value": 16.0,
+              "bounds": [
+                429.0,
+                264.0,
+                330.0,
+                24.0
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
