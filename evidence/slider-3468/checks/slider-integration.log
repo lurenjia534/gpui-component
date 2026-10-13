@@ -1,0 +1,13 @@
+   Compiling gpui-component v0.7.3 (/home/luren/Code/rust/gpui-component/crates/component)
+   Compiling gpui-kit v0.7.3 (/home/luren/Code/rust/gpui-component/crates/kit)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.62s
+     Running tests/integration/main.rs (target/debug/deps/integration-d5b9a38007da5d3b)
+
+running 4 tests
+test slider_steps::slider_accessibility_labels_follow_the_existing_nodes ... ok
+test slider_steps::slider_track_changes_before_release_and_releases_only_once ... ok
+test slider_steps::disabled_slider_gesture_neither_changes_value_nor_emits_events ... ok
+test slider_steps::slider_thumb_drag_updates_live_and_stops_after_release ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 384 filtered out; finished in 0.01s
+

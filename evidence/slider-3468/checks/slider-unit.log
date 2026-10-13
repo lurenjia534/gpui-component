@@ -1,0 +1,20 @@
+   Compiling gpui-component v0.7.3 (/home/luren/Code/rust/gpui-component/crates/component)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 8.50s
+     Running unittests src/lib.rs (target/debug/deps/gpui_base-fc6956ddc785196f)
+
+running 4 tests
+test slider::tests::legacy_value_conversions_and_clamping_are_preserved ... ok
+test slider::tests::legacy_logarithmic_state_keeps_mapping ... ok
+test slider::tests::legacy_linear_state_keeps_percentage_and_range_ordering ... ok
+test slider::tests::legacy_logarithmic_validation_is_preserved - should panic ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 1332 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/gpui_component-1e4b7a25968b1470)
+
+running 2 tests
+test slider::tests::disabled_slider_is_inert ... ok
+test slider::tests::pointer_updates_the_migrated_state ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 658 filtered out; finished in 0.00s
+
