@@ -1,0 +1,12 @@
+   Compiling gpui-base v0.8.0 (/home/luren/Code/rust/gpui-component/crates/base)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 8.09s
+     Running unittests src/lib.rs (target/debug/deps/gpui_base-b89af31bed85903c)
+
+running 1 test
+columns=32 body_rows=64 bytes=452 retained_cells=2080 source_cells=96 generated_cells=1984
+columns=64 body_rows=128 bytes=900 retained_cells=8256 source_cells=192 generated_cells=8064
+columns=128 body_rows=256 bytes=1796 retained_cells=32896 source_cells=384 generated_cells=32512
+test text::format::markdown::sparse_table_evidence ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 1484 filtered out; finished in 0.02s
+
