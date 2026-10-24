@@ -1,7 +1,5 @@
 # Sparse Markdown table allocation: before and after
 
-[中文](README.zh-CN.md)
-
 Validated on 2026-10-24 against base commit
 `69a2077c2da588de1c46b89ffd903e1373e45a29`, with
 `gpui-kit-sparse-table.patch` applied on `fix/sparse-markdown-table`.
