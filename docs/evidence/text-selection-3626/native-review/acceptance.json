@@ -1,0 +1,13 @@
+{
+  "code_review": "no_confirmed_blocking_findings",
+  "clippy": "passed",
+  "native_input": "KDE RemoteDesktop portal authorized EIS pointer and keyboard",
+  "forward_reverse_copy": "passed exact clipboard equality",
+  "touch_handles_and_copy_menu": "passed via native touch_selection demo Long press button and real pointer drag",
+  "wayland_scroll_preserves_selection": "passed page visibly scrolled and clipboard remained ProseMirror",
+  "endpoint_before_unmount": "has_selection=true\nALPHA first selectable paragraph\n\nBRAVO second selectable paragraph\n\nCHARLIE third selectable paragraph\n",
+  "endpoint_after_unmount": "has_selection=false\n",
+  "endpoint_after_remount": "has_selection=false\n",
+  "physical_touchscreen": "not_verified",
+  "production_edits_added_during_review": false
+}

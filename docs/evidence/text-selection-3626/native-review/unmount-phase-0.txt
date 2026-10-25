@@ -1,0 +1,6 @@
+has_selection=true
+ALPHA first selectable paragraph
+
+BRAVO second selectable paragraph
+
+CHARLIE third selectable paragraph

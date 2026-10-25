@@ -1,0 +1,52 @@
+{
+  "baseline_commit": "7b14e03f2ed4b46fc4149a8a523c7f91bcad6560",
+  "branch": "fix/3626-text-selection-frame-publication",
+  "before_worktree": "/home/luren/Code/rust/gpui-kit-3626-before",
+  "baseline_fixture_only": true,
+  "before_full": [
+    "test result: FAILED. 1454 passed; 35 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.39s"
+  ],
+  "after_full": [
+    "test result: FAILED. 1469 passed; 23 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.45s"
+  ],
+  "new_failures": [],
+  "shared_failures": [
+    "dock::tab_group::tests::an_empty_group_asks_the_renderer_for_its_empty_state",
+    "dock::tab_group::tests::the_renderer_composes_frame_then_tab_bar_then_content",
+    "input::state::tests::test_input_does_not_invalidate_cached_parent_during_paint",
+    "input::state::tests::test_scroll_bounce_releases_when_the_end_packet_is_horizontal",
+    "input::state::tests::test_scroll_bounce_stretches_past_the_end_and_springs_back",
+    "nav_stack::tests::the_outgoing_view_is_dropped_once_its_exit_has_run",
+    "popover::tests::default_open_renders_content_without_activation",
+    "popup::tests::the_popup_surface_blocks_the_panel_it_covers",
+    "popup::tests::trigger_capture_enables_deferred_content_on_the_next_frame",
+    "scroll_bounce::tests::list_stretches_only_the_distance_past_either_edge",
+    "scroll_bounce::tests::phaseless_wheel_scrolls_back_right_after_bouncing",
+    "scroll_bounce::tests::trackpad_direction_change_between_frames_does_not_bounce_in_the_middle",
+    "scroll_bounce::tests::trackpad_release_between_frames_does_not_bounce_in_the_middle",
+    "scrollbar::tests::repeated_touch_and_mouse_drags_keep_the_painted_grab_point",
+    "text::state::tests::reveal_range::a_reveal_that_cannot_be_shown_gives_up",
+    "text::text_view::tests::long_press_release_keeps_handles_which_drag_the_selection",
+    "text::text_view::tests::long_press_selects_word_then_drag_extends_selection",
+    "text::text_view::tests::ordered_markdown_list_start_reaches_layout_marker",
+    "text::text_view::tests::table_row_backgrounds_follow_the_frame_corner_radius",
+    "toast::tests::bottom_stack_reflow_moves_up_without_an_opposite_direction_jump",
+    "toast::tests::keyed_stack_reflow_moves_from_the_current_visual_position",
+    "virtual_list::tests::horizontal_visible_range_and_deferred_scroll_are_preserved",
+    "virtual_list::tests::vertical_visible_range_and_deferred_scroll_are_preserved"
+  ],
+  "failures_absent_after": [
+    "text::inline_virtual_tests::inline_virtual_resource_growth_remeasures_all_blocks_and_preserves_copy",
+    "text::state::tests::range_highlights::a_dragged_selection_highlights_through_its_source_range",
+    "text::text_view::tests::copy_before_paint::virtualized_flow_retains_its_source_owned_partial_anchor",
+    "text::text_view::tests::inline_object_inherits_bold_and_link_clicks_without_opening_on_drag",
+    "text::text_view::tests::inline_plugins_drag_and_copy_across_formulas_in_both_directions",
+    "text::text_view::tests::inline_resource_size_update_reflows_without_changing_selection",
+    "text::text_view::tests::scaled_inline_code_keeps_links_and_drag_selection",
+    "text::text_view::tests::selection_band_beyond_clip_copies_offscreen_text",
+    "text::text_view::tests::table_cell_copy_excludes_following_blocks_in_a_scrollable_view",
+    "text::text_view::tests::table_cell_selection_does_not_leak_into_another_window",
+    "text::text_view::tests::table_drag_from_a_cell_stays_in_that_cell",
+    "text_selection::tests::active_selection_keeps_unrelated_text_views_retained"
+  ]
+}
