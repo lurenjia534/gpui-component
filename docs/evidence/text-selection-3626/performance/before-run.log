@@ -1,0 +1,15 @@
+   Compiling gpui-kit-assets v0.8.0 (/home/luren/Code/rust/gpui-kit-3626-before/crates/assets)
+   Compiling gpui-base v0.8.0 (/home/luren/Code/rust/gpui-kit-3626-before/crates/base)
+   Compiling gpui-component v0.8.0 (/home/luren/Code/rust/gpui-kit-3626-before/crates/component)
+   Compiling gpui-kit v0.8.0 (/home/luren/Code/rust/gpui-kit-3626-before/crates/kit)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 17.28s
+     Running `/home/luren/Code/rust/gpui-component/target/debug/examples/selection_3626 before /home/luren/Desktop/3626-test-results/performance`
+before count=16 trial=0 selected="Text 0\n"
+before count=16 trial=1 selected="Text 0\n"
+before count=16 trial=2 selected="Text 0\n"
+before count=64 trial=0 selected="Text 0\n"
+before count=64 trial=1 selected="Text 0\n"
+before count=64 trial=2 selected="Text 0\n"
+before count=164 trial=0 selected="Text 0\n"
+before count=164 trial=1 selected="Text 0\n"
+before count=164 trial=2 selected="Text 0\n"

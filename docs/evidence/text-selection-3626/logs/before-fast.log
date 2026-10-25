@@ -1,0 +1,22 @@
+    Blocking waiting for file lock on build directory
+   Compiling gpui-base v0.8.0 (/home/luren/Code/rust/gpui-kit-3626-before/crates/base)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 31.86s
+     Running unittests src/lib.rs (/home/luren/Code/rust/gpui-component/target/debug/deps/gpui_base-35f7c2197fee44ca)
+
+running 1 test
+
+thread 'text_selection::tests::active_selection_keeps_unrelated_text_views_retained' (491816) panicked at crates/base/src/text_selection.rs:4729:9:
+assertion `left == right` failed: active registration redrew an unrelated view
+  left: 8
+ right: 4
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test text_selection::tests::active_selection_keeps_unrelated_text_views_retained ... FAILED
+
+failures:
+
+failures:
+    text_selection::tests::active_selection_keeps_unrelated_text_views_retained
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 1488 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `-p gpui-base --lib`

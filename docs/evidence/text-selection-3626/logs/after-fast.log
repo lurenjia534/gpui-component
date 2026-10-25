@@ -1,0 +1,64 @@
+   Compiling gpui-base v0.8.0 (/home/luren/Code/rust/gpui-component/crates/base)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 20.59s
+     Running unittests src/lib.rs (target/debug/deps/gpui_base-35f7c2197fee44ca)
+
+running 56 tests
+test text::inline::tests::test_point_in_text_selection_same_visual_line_with_different_y ... ok
+test text::inline::tests::test_point_in_text_selection_reversed_drag_direction ... ok
+test text::inline::tests::test_point_in_text_selection ... ok
+test text::inline::tests::test_point_in_text_selection_same_visual_line_with_reversed_y ... ok
+test text_selection::tests::begin_update_and_end_publish_a_cross_participant_selection ... ok
+test text_selection::tests::blank_only_drag_never_publishes_or_copies_selection ... ok
+test text_selection::tests::dead_participants_are_pruned_and_empty_selection_falls_back_safely ... ok
+test text_selection::tests::clear_or_unmount_stops_auto_scroll_before_discarding_the_anchor ... ok
+test text_selection::tests::cross_participant_selection_excludes_participants_outside_its_document_interval ... ok
+test text_selection::tests::frame_sweep_keeps_a_participant_registered_before_the_selection_element_paints ... ok
+test text_selection::tests::content_key_resolver_runs_outside_the_window_state_lease ... ok
+test text_selection::tests::changing_scope_clears_the_previous_scope_selection ... ok
+test text_selection::tests::lazy_registration_does_not_enable_queries_without_the_element ... ok
+test text_selection::tests::plain_projection_invalidates_cached_copy_when_the_snapshot_changes ... ok
+test text_selection::tests::multi_click_uses_text_layout_window_coordinates_at_a_nonzero_origin ... ok
+test text_selection::tests::active_dnd_does_not_move_a_text_selection_cursor ... ok
+test text_selection::tests::drag_auto_scroll_stops_when_the_content_mask_collapses ... ok
+test text_selection::tests::selection_events_preserve_snapshot_then_clear_order ... ok
+test text_selection::tests::double_click_expands_a_plain_run_to_the_input_word_boundary ... ok
+test text_selection::tests::mounted_selection_element_does_not_keep_an_idle_frame_queue_alive ... ok
+test text_selection::tests::copy_callback_can_reenter_window_and_handle_selection ... ok
+test text_selection::tests::proxy_endpoints_break_equal_position_ties_by_document_order ... ok
+test text_selection::tests::plain_projection_orders_cached_runs_by_frame_order_not_input_order ... ok
+test text_selection::tests::selection_callback_can_reenter_its_selection_state ... ok
+test text_selection::tests::plain_projection_preserves_forward_reversed_and_unicode_ranges ... ok
+test text_selection::tests::removing_an_unselected_participant_preserves_the_current_selection ... ok
+test text_selection::tests::removing_either_range_endpoint_discards_the_shared_selection ... ok
+test text_selection::tests::duplicate_selection_elements_gate_real_pointer_gestures_and_reentrant_clear ... ok
+test text_selection::tests::plain_projection_caches_multiple_participant_copies_in_document_order ... ok
+test text_selection::tests::selection_handle_is_the_public_adapter_seam ... ok
+test text_selection::tests::scope_and_suppression_prevent_unrelated_participants_from_participating ... ok
+test text_selection::tests::pointer_moves_after_a_click_do_not_auto_scroll ... ok
+test text_selection::tests::selection_handle_can_subscribe_its_window_to_refresh ... ok
+test text_selection::tests::shift_extension_keeps_its_original_anchor_when_reversed ... ok
+test text_selection::tests::equal_area_hovered_participants_break_ties_by_document_order ... ok
+test text_selection::tests::text_selection_namespace_is_a_safe_no_op_until_the_element_is_rendered ... ok
+test text_selection::tests::redrawing_selectable_text_leaves_its_readers_retained ... ok
+test text_selection::tests::shift_extension_falls_back_when_the_anchor_participant_was_swept ... ok
+test text_selection::tests::public_selection_data_uses_builders_and_readers ... ok
+test text_selection::tests::reentrant_scope_from_one_window_does_not_pollute_another ... ok
+test text_selection::tests::plain_projection_spans_multiple_runs_and_leaves_empty_gutters_unselected ... ok
+test text_selection::tests::scope_stack_is_cleaned_after_panicking_subtree ... ok
+test text_selection::tests::selection_element_initializes_suppression_and_respects_bubble_suppression ... ok
+test text_selection::tests::retained_selection_state_releases_and_does_not_resurrect_selection ... ok
+test text_selection::tests::plain_projection_safely_rejects_a_text_layout_length_mismatch ... ok
+test text_selection::tests::triple_click_expands_to_the_input_logical_line_not_the_visual_row ... ok
+test text_selection::tests::unmounted_selection_does_not_revive_when_the_participant_returns ... ok
+test text_selection::tests::unit_selection_element_supports_scope_and_registration_on_the_first_frame ... ok
+test text_selection::tests::text_selection_namespace_reports_copies_ends_and_clears_selection ... ok
+test text_selection::tests::two_selection_elements_schedule_only_one_post_frame_sweep ... ok
+test text_selection::tests::two_windows_isolate_selection_copy_clear_and_release_ownership ... ok
+test text_selection::tests::selection_layer_handles_real_double_and_triple_click_events ... ok
+test text_selection::tests::active_selection_keeps_unrelated_text_views_retained ... ok
+test text_selection::tests::scrolling_selected_text_does_not_rebuild_unrelated_document_order ... ok
+test text_selection::tests::retained_text_order_survives_partial_frames_insertion_and_reordering ... ok
+test text_selection::tests::active_selection_frame_publication_visits_participants_linearly ... ok
+
+test result: ok. 56 passed; 0 failed; 0 ignored; 0 measured; 1436 filtered out; finished in 0.02s
+
