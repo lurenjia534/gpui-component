@@ -1,0 +1,34 @@
+   Compiling gpui-base v0.9.0 (/home/luren/Code/rust/gpui-component/crates/base)
+warning: function `append_node_highlights` is never used
+    --> crates/base/src/text/node.rs:2907:4
+     |
+2907 | fn append_node_highlights(
+     |    ^^^^^^^^^^^^^^^^^^^^^^
+     |
+     = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `gpui-base` (lib test) generated 1 warning
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.74s
+     Running unittests src/lib.rs (target/debug/deps/gpui_base-1538903a27d171c1)
+
+running 2 tests
+test text::node::tests::paragraph_highlight_builders_merge_each_mark_once ... FAILED
+test text::node::tests::paragraph_highlights_preserve_overlaps_and_utf8_boundaries ... ok
+
+failures:
+
+---- text::node::tests::paragraph_highlight_builders_merge_each_mark_once stdout ----
+
+thread 'text::node::tests::paragraph_highlight_builders_merge_each_mark_once' (787660) panicked at crates/base/src/text/node.rs:4844:17:
+assertion `left == right` failed
+  left: 6240
+ right: 192
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    text::node::tests::paragraph_highlight_builders_merge_each_mark_once
+
+test result: FAILED. 1 passed; 1 failed; 0 ignored; 0 measured; 1626 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `-p gpui-base --lib`

@@ -1,0 +1,15 @@
+Baseline exit code: 101
+Baseline failing tests: ['text::state::tests::reveal_range::a_reveal_that_cannot_be_shown_gives_up', 'text::text_view::tests::long_press_release_keeps_handles_which_drag_the_selection', 'text::text_view::tests::long_press_selects_word_then_drag_extends_selection', 'text::text_view::tests::ordered_markdown_list_start_reaches_layout_marker', 'text::text_view::tests::table_row_backgrounds_follow_the_frame_corner_radius']
+Patched failing tests: ['text::state::tests::reveal_range::a_reveal_that_cannot_be_shown_gives_up', 'text::text_view::tests::long_press_release_keeps_handles_which_drag_the_selection', 'text::text_view::tests::long_press_selects_word_then_drag_extends_selection', 'text::text_view::tests::ordered_markdown_list_start_reaches_layout_marker', 'text::text_view::tests::table_row_backgrounds_follow_the_frame_corner_radius']
+
+
+failures:
+    text::state::tests::reveal_range::a_reveal_that_cannot_be_shown_gives_up
+    text::text_view::tests::long_press_release_keeps_handles_which_drag_the_selection
+    text::text_view::tests::long_press_selects_word_then_drag_extends_selection
+    text::text_view::tests::ordered_markdown_list_start_reaches_layout_marker
+    text::text_view::tests::table_row_backgrounds_follow_the_frame_corner_radius
+
+test result: FAILED. 422 passed; 5 failed; 0 ignored; 0 measured; 1208 filtered out; finished in 1.47s
+
+error: test failed, to rerun pass `-p gpui-base --lib`

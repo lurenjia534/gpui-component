@@ -1,0 +1,25 @@
+{
+  "default_text_tests": "test result: ok. 428 passed; 0 failed; 0 ignored; 0 measured; 1200 filtered out; finished in 2.51s",
+  "fast_text_tests": "test result: FAILED. 424 passed; 5 failed; 0 ignored; 0 measured; 1208 filtered out; finished in 1.21s",
+  "unpatched_fast_text_tests": "test result: FAILED. 422 passed; 5 failed; 0 ignored; 0 measured; 1208 filtered out; finished in 1.47s",
+  "fast_preexisting_failures": [
+    "text::state::tests::reveal_range::a_reveal_that_cannot_be_shown_gives_up",
+    "text::text_view::tests::long_press_release_keeps_handles_which_drag_the_selection",
+    "text::text_view::tests::long_press_selects_word_then_drag_extends_selection",
+    "text::text_view::tests::ordered_markdown_list_start_reaches_layout_marker",
+    "text::text_view::tests::table_row_backgrounds_follow_the_frame_corner_radius"
+  ],
+  "old_cost_regression_test": "expected failure: 6240 inputs, expected 192 for 64 nodes",
+  "benchmark_equivalence": "passed for all fixtures and explicit cross-node/UTF-8/empty-mark cases",
+  "clippy": "passed: cargo clippy -p gpui-base --features test-support --lib --tests --locked -- -D warnings",
+  "targeted_rustfmt": "passed for both changed files",
+  "workspace_rustfmt": "fails only on two pre-existing formatting differences in unchanged crates/base/src/text/inline_flow.rs",
+  "git_diff_check": "passed",
+  "temporary_benchmark_code": "removed; final files match after snapshots",
+  "main_refs": {
+    "main": "8da4e005258ac0aac9a6a332cce746eeaafa08a8",
+    "origin/main": "8da4e005258ac0aac9a6a332cce746eeaafa08a8",
+    "upstream/main": "8da4e005258ac0aac9a6a332cce746eeaafa08a8"
+  },
+  "final_regression_tests": "2 passed after restoring the final patch and test counter"
+}

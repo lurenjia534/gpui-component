@@ -1,0 +1,1 @@
+cargo test -p gpui-base --features test-support --lib --locked --config profile.dev.package.gpui-base.opt-level=3 paragraph_highlight_performance_comparison -- --ignored --nocapture --test-threads=1

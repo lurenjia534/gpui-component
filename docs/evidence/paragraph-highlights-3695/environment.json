@@ -1,0 +1,22 @@
+{
+  "baseline_commit": "8da4e005258ac0aac9a6a332cce746eeaafa08a8",
+  "patch": "/home/luren/Desktop/issue-3695-patches/0002-avoid-quadratic-paragraph-highlights.patch",
+  "system": "Linux-7.2.11-arch1-1-x86_64-with-glibc2.44",
+  "cpu": "AMD Ryzen 9 7950X 16-Core Processor",
+  "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "compiler_setting": "dev/test profile with profile.dev.package.gpui-base.opt-level=3; debug assertions enabled; not a full release build",
+  "counter_instrumentation": "disabled during timing, restored afterwards",
+  "samples": 9,
+  "statistics": "median of nine batch means, alternating before/after order; per-call time includes result destruction",
+  "input": "Some prose with `inline code` and **bold text** here. ",
+  "excluded_from_timing": [
+    "Markdown parsing",
+    "fixture construction",
+    "cold-cache invalidation"
+  ],
+  "scope": "paragraph highlight/item builders; not GPU rendering or frame time",
+  "framework_version": "gpui-base 0.9.0",
+  "gpui_version": "gpui-pre 0.3.11",
+  "gpui_fast_version": "0.1.13",
+  "main_sync": "local main == upstream/main == origin/main; fork main fast-forwarded without patch commits"
+}

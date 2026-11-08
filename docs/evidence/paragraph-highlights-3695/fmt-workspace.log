@@ -1,0 +1,26 @@
+Diff in /home/luren/Code/rust/gpui-component/crates/base/src/text/inline_flow.rs:1039:
+             })
+         })
+         .collect::<Vec<_>>();
+[31m-    let line_ranges = line_ranges(items, &image_sizes, &objects, text_style, wrap_width, window);
+(B[m[32m+    let line_ranges = line_ranges(
+(B[m[32m+        items,
+(B[m[32m+        &image_sizes,
+(B[m[32m+        &objects,
+(B[m[32m+        text_style,
+(B[m[32m+        wrap_width,
+(B[m[32m+        window,
+(B[m[32m+    );
+(B[m     let font_size = text_style.font_size.to_pixels(rem_size);
+     let mut fragments = Vec::new();
+     let mut empty_lines = Vec::new();
+Diff in /home/luren/Code/rust/gpui-component/crates/base/src/text/inline_flow.rs:2010:
+ 
+     #[test]
+     fn inline_image_wider_than_the_wrap_is_narrowed_to_it() {
+[31m-        use gpui::{AbsoluteLength, Empty, TestApp};
+(B[m         use super::super::inline::test_fonts::{BODY, WideMonoTextSystem};
+[32m+        use gpui::{AbsoluteLength, Empty, TestApp};
+(B[m 
+         let mut app = TestApp::with_text_system(Arc::new(WideMonoTextSystem));
+         let mut window = app.open_window(|_, _| Empty);

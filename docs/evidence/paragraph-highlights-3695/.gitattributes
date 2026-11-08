@@ -1,0 +1,3 @@
+# Preserve raw logs and unified patches verbatim.
+*.log -whitespace
+*.patch -whitespace

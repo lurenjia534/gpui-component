@@ -1,0 +1,10 @@
+   Compiling gpui-base v0.9.0 (/home/luren/Code/rust/gpui-component/crates/base)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 8.43s
+     Running unittests src/lib.rs (target/debug/deps/gpui_base-1538903a27d171c1)
+
+running 2 tests
+test text::node::tests::paragraph_highlight_builders_merge_each_mark_once ... ok
+test text::node::tests::paragraph_highlights_preserve_overlaps_and_utf8_boundaries ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 1626 filtered out; finished in 0.01s
+
